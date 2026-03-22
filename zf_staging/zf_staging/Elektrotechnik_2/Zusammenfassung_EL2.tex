@@ -1,0 +1,243 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{multicol}
+\title{Ladung und Potential}
+\author{}
+\date{}
+
+\begin{document}
+    
+    \maketitle
+    \tableofcontents
+    
+    \section{Wechselspannung}
+    
+    \subsection{Kerngrössen von Wechselspannung und Wechselstrom}
+    
+    \subsection{Idealer Wirkwiderstand an Wechselspannung}
+    
+    \begin{tabular}{p{0.45\textwidth} p{0.45\textwidth}}
+    	\vspace{0pt}
+    	Bei einem Wirkwiderstand haben \textbf{Strom} und \textbf{Spannung} 
+    	immer die gleiche Phase:
+    	&
+    	\vspace{0pt}
+    	\includegraphics[width=0.5\textwidth]{img/wirkwiderstand} \\
+    \end{tabular}
+    
+    \textbf{Ohmsches Gesetzt für Effektivwerte}
+    $$U=R*I$$
+    
+    \textbf{Ohmsches Gesetzt mit Augenblickwerten}
+    $$u = i * R = \hat{i} * R * sin(\omega * t)$$
+    
+    \subsection{Idealer Kondensator an Wechselspannung}
+    
+    \begin{tabular}{p{0.45\textwidth} p{0.45\textwidth}}
+    	\vspace{0pt}
+    	Die Kondensatorspannung wirkt als Gegenspannug strombegrenzend. Die strombegrenzende Wirkung eines Kondensators im Wechselstromkreis wird als \textbf{Blindwiderstand} bezeichnet. 
+    	$$X_C = \text{kapazitiver Blindwiderstand}$$
+    	$$X_C = \frac{U_c}{I_c}$$
+    	$$[X_C] = \Omega$$
+    	&
+    	\vspace{0pt}
+    	\includegraphics[width=0.5\textwidth]{img/kondensator_wechselfrequenz} \\
+    	
+    	\vspace{0pt}
+    	Der kapazitive Blindwiderstand wird durch din Kapaiztätwert und die Frequenz der angelegten Wechselspannung bestimmt. & 
+    	\vspace{0pt}
+    	$$X_C = f(C,f)$$
+    	$$X_C = \frac{1}{2\pi * f * C} = \frac{1}{\omega * C}$$ \\
+    	
+    	\vspace{0pt}
+    	Analog zum Gleichstrom existiert auch für den Wechselstrom das reziproke zum Widerstand: \textbf{kapazitiver Blindleitwert} & 
+    	\vspace{0pt}
+    	$$B_C = \frac{1}{X_C} = \omega * C$$
+    	$$[B_C] = \frac{1}{\Omega} = S (Siemens)$$ \\
+    	
+    	\vspace{0pt}
+    	Der \textbf{Strom} in einem Kondensator \textbf{eilt} der Spannung an ihm um \textbf{90° voraus}. & 
+    	\vspace{0pt} \includegraphics[width=0.5\textwidth]{img/kondensator_phasenverschiebung}
+    \end{tabular}
+    
+    \subsection{Ideale Spule an Wechselspannung}
+    
+    \begin{tabular}{p{0.45\textwidth} p{0.45\textwidth}}
+    	\vspace{0pt}
+    	Die in der Spule erzeugte Gegenspannung wirk strombegrenzend. Die Spule verhält sich somit im Wechselstromkreus wie ein Widerstand. \textbf{Induktiver BLindwiderstand} = Wiederstand der Spule im Wechselstrom. 
+    	
+    	&
+    	
+    	\vspace{0pt}
+    	$$X_L = \text{induktiver Blindwiderstand}$$
+    	$$X_L = \frac{U_L}{I_L}$$
+    	$$[X_L] = \Omega$$ \\
+    	
+    	\vspace{0pt}
+    	Der induktive Blindwiderstand wird durch die Induktivität und die Frequenz der angelegten Wechselspannung bestimmt. & 
+    	\vspace{0pt}
+    	$$X_L = f(L,f)$$
+    	$$X_L = 2\pi * f * L = \omega * C$$ \\
+    	
+    	\vspace{0pt}
+    	Analog zum Gleichstrom existiert auch für den Wechselstrom das reziproke zum Widerstand: \textbf{induktive Blindleitwert} & 
+    	\vspace{0pt}
+    	$$B_L = \frac{1}{X_L} = \omega * C$$
+    	$$[B_L] = \frac{1}{\Omega} = S (Siemens)$$ \\
+    	
+    	\vspace{0pt}
+    	Der \textbf{Strom} in einer Spule \textbf{eilt} der Spannung an ihm um \textbf{90° nach}. & 
+    	\vspace{0pt} \includegraphics[width=0.5\textwidth]{img/spule_phasenverschiebung}
+    \end{tabular}
+    
+    \subsection{Zusammenfassung: Wirkwiderstand, Kondensator und Spule}
+    
+    \includegraphics[width=1\textwidth]{img/zusammenfassung}
+    
+    \subsection{Elektrische Grössen in komplexer Schreibweise}
+    
+    \begin{tabular}{p{0.45\textwidth} p{0.45\textwidth}}
+    	\vspace{0pt}
+    	Da wir für den Wechselstrom zwei verschiedene Grössen verwenden, die sich durch einen Winkel unterscheiden, bietet es sich sehr an, die Grössen mit komplexen Zhaen darzustellen.
+    	
+    	&
+    	
+    	\vspace{0pt}
+    	\includegraphics[width=0.5\textwidth]{img/elektrische_grössen}
+    	\includegraphics[width=0.5\textwidth]{img/komplexer_elektrischer_widerstand}\\
+    	
+    	\vspace{0pt}
+    	\textbf{Komplexer kapazitiver Blindwiderstand}
+    	
+    	&
+    	
+    	\vspace{0pt}
+    	$$\frac{1}{j}X_C=-jX_C=\frac{1}{j*2\pi*f*C}=X_C*e^{-j\frac{\pi}{2}}$$\\
+    	
+    	\vspace{0pt}
+    	\textbf{Komplexer induktiver Blindwiderstand}
+    	
+    	&
+    	
+    	\vspace{0pt}
+    	$$jX_L=j*2\pi*f*L=X_L*e^{j\frac{\pi}{2}}$$\\
+    	
+    	\vspace{0pt}
+    	\textbf{Komplexer elektrische Grössen}
+    	
+    	&
+    	
+    	\vspace{0pt}
+    	$$\underline{U} = \textbf{Wechselspannung (Effektivwert)}$$
+    	$$\underline{I} = \textbf{Wechselstromstärke (Effektivwert)}$$
+    	$$\underline{Z} = \textbf{Scheinwiderstand (Impedanz)}$$
+    	$$\underline{Y} = \textbf{Scheinleitwert (Admittanz)}$$
+    	$$\underline{S} = \textbf{Scheinleistung}$$\\
+    	
+    	\vspace{0pt}
+    	\textbf{Normalform komplexer elektrische Grössen}
+    	
+    	&
+    	
+    	\vspace{0pt}
+    	$$\underline{U} = U_R \pm jU_{L,C}$$
+    	$$\underline{I} = I_R \pm jI_{L,C}$$
+    	$$\underline{Z} = R \pm jX_{L,C}$$
+    	$$\underline{Y} = G \pm jB_{L,C}$$
+    	$$\underline{S} = P \pm jQ_{L,C}$$\\
+
+    \end{tabular}
+    
+    \subsubsection{Wechselstromschaltung}
+    
+    \subsubsection{Widerstand und Kondensator - RC}
+    
+    \begin{tabular}{p{0.45\textwidth} p{0.45\textwidth}}
+    	\vspace{0pt}
+    	Schliesst man eine Reihenschaltung aus Wirkwiderstand und Kondensator an eine Wechselspannung, können aufgrund der \textbf{Phasenverschiebung} von Strom und Spannung die Widerstandwerte nicht einfach zusammengezählt werden. Hier ist es nun Sinnvoll denn Wiederstand als Komplexe zahl anzuschauen mit einem \textbf{Realteil(Wirkwiderstand)} und einem \textbf{Imagniärteil(Blindwiderstand)}. Damit lässt sich nun gut rechen und mann kann die \textbf{Scheinspannung(Gesamtspannung)} einfach ermitteln indem man den \textbf{Betrag} der komplexe Zahl berechnet:
+    	
+    	$$U_{12} = \sqrt{(U_C)^2 + (U_R)^2}$$ 
+    	
+    	&
+    	
+    	\vspace{0pt}
+    	\includegraphics[width=0.5\textwidth]{img/reihenschaltung_rc}
+    	\includegraphics[width=0.5\textwidth]{img/reihenschaltung_rc_zeiger}\\
+    	
+    	\vspace{0pt}
+    	\textbf{Scheinwiderstand oder Impedanz}
+    	$$Z = \frac{U}{I}$$
+    	$$Z = \sqrt{R^2+(X_C)^2}$$
+    	$$Z = \sqrt{R^2+(\frac{1}{\omega C})^2}$$
+    	 
+    	&
+    	\vspace{0pt}
+    	\includegraphics[width=0.5\textwidth]{img/reihenschaltung_scheinwiderstand}\\
+    	
+    	\vspace{0pt}
+    	In den rechtwinkligen spannungs- und Widerstanddreiecken gelten folgende Beziehungen:
+    	
+    	$$
+    	\sin\varphi = \frac{U_C}{U} = \frac{X_C}{Z} = \frac{\dfrac{1}{\omega C}}{\sqrt{R^2 + X_C^2}}
+    	$$
+    	
+    	$$
+    	\cos\varphi = \frac{U_R}{U} = \frac{R}{Z} = \frac{R}{\sqrt{R^2 + X_C^2}}
+    	$$
+    	
+    	$$
+    	\tan\varphi = \frac{U_C}{U_R} = \frac{X_C}{R} = \frac{\omega C}{R} = \frac{1}{\omega RC}
+    	$$
+    
+    	$$
+    	\varphi = \arctan\frac{U_C}{U_R}
+    	$$
+    	
+    	&
+    	
+    	\vspace{0pt}
+    	In den rechtwinkligen spannungs- und Widerstanddreiecken gelten folgende Beziehungen:
+    	
+    	\vspace{0pt}
+    	$$
+    	\underline{Z} = \text{Scheinwiderstand}
+    	$$
+    	$$
+    	\underline{Z} = R - \mathrm{j}\, X_C = R + \frac{1}{\mathrm{j}}\, X_C = R + \frac{1}{\mathrm{j}\,\omega C}
+    	$$
+    	$$
+    	|\underline{Z}| = Z = \sqrt{R^2 + X_C^2}
+    	$$
+    	$$
+    	\underline{U} = U_R - \mathrm{j}\, U_C
+    	$$
+    	$$
+    	|\underline{U}| = U = \sqrt{U_R^2 + U_C^2}
+    	$$
+    	$$
+    	\underline{I} = \frac{\underline{U}}{\underline{Z}} = \frac{U}{Z}\,\mathrm{e}^{\mathrm{j}\,\varphi_{I,U}} = I \cdot \mathrm{e}^{\mathrm{j}\,\varphi_{I,U}}
+    	$$
+    	
+    \end{tabular}
+    
+    \subsection{Widerstand und Spule - RL}
+    
+    \section{Resonanz}
+    
+    \textbf{Resonanzfrequenz}
+    
+    $$f_0 = \frac{1}{2\pi\sqrt{LC}}$$
+    
+    \textbf{Resonanz-Tranformator: Resonanzfrequenz}
+    $$f_r=\frac{1}{2\pi\sqrt{LC}}*\sqrt{1-\frac{RC}{L/C}}$$
+    
+    $$R_r = \sqrt{\frac{L}{C}(1-\omega^2LC)}$$
+    
+\end{document}

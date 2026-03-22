@@ -1,0 +1,108 @@
+\documentclass[../zusammenfassung_AN.tex]{subfiles}
+
+\begin{document}
+
+\subsubsection{Fundamentale Grenzwerte}
+\paragraph{Sinus}
+$$
+\lim_{x\to 0} \frac{\sin x}{x} = 1
+$$
+
+Betrachte den Einheitskreis und einen Winkel $x>0$ im Bogenmaß.
+Dann gilt geometrisch:
+
+$$
+\sin x \le x \le \tan x.
+$$
+
+Da $\tan x = \frac{\sin x}{\cos x}$ folgt:
+
+$$
+\sin x \le x \le \frac{\sin x}{\cos x}.
+$$
+
+Division durch $\sin x > 0$ ergibt:
+
+$$
+1 \le \frac{x}{\sin x} \le \frac{1}{\cos x}.
+$$
+
+Da alle Terme positiv sind, bilden wir Kehrwerte
+(unter Beachtung der Umkehrung der Ungleichung):
+
+$$
+1 \ge \frac{\sin x}{x} \ge \cos x.
+$$
+
+Also:
+
+$$
+\cos x \le \frac{\sin x}{x} \le 1.
+$$
+
+Da $\cos x \to 1$ für $x \to 0$,
+folgt mit dem Sandwich-Satz:
+
+$$
+\lim_{x\to 0} \frac{\sin x}{x} = 1.
+$$
+
+\paragraph{Kosinus}
+$$
+\lim_{x\to 0} \frac{\cos x - 1}{x} = 0
+$$
+
+Verwende die Identität (siehe \autoref{subsubsec:trigonometrische_identitäten})
+
+$$
+\cos x = 1 - 2\sin^2\left(\frac{x}{2}\right).
+$$
+
+Dann:
+
+$$
+\cos x - 1
+=
+-2\sin^2\left(\frac{x}{2}\right).
+$$
+
+Somit:
+
+$$
+\frac{\cos x - 1}{x}
+=
+\frac{-2\sin^2(x/2)}{x}.
+$$
+
+Da $x = 2 \cdot \frac{x}{2}$, schreiben wir:
+
+$$
+=
+-
+\frac{\sin(x/2)}{x/2}
+\cdot
+\sin(x/2).
+$$
+
+Nun gilt:
+
+$$
+\frac{\sin(x/2)}{x/2} \to 1,
+\quad
+\sin(x/2) \to 0
+\quad
+\text{für } x \to 0.
+$$
+
+Also:
+
+$$
+\lim_{x\to 0} \frac{\cos x - 1}{x}
+=
+-1 \cdot 0
+=
+0.
+$$
+
+\end{document}
+

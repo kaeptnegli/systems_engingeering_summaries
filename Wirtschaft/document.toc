@@ -1,0 +1,75 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Grundlagen BWL \& St. Galler Management Modell (SGMM)}{1}{}%
+\contentsline {section}{\numberline {2}Strategie}{1}{}%
+\contentsline {subsection}{\numberline {2.1}Strategische Analyse}{2}{}%
+\contentsline {paragraph}{SWOT}{2}{}%
+\contentsline {paragraph}{Porter – 5 Forces}{2}{}%
+\contentsline {paragraph}{PESTEL}{2}{}%
+\contentsline {paragraph}{Generische Wettbewerbsstrategien}{2}{}%
+\contentsline {paragraph}{Wachstumsstrategien}{2}{}%
+\contentsline {subsection}{\numberline {2.2}Strategische Planung}{2}{}%
+\contentsline {paragraph}{4 Branchen (Porter)}{2}{}%
+\contentsline {paragraph}{4-Produkt-Markt-Strategien nach Ansoff}{2}{}%
+\contentsline {section}{\numberline {3}Marketing}{3}{}%
+\contentsline {subsection}{\numberline {3.1}Marktanalyse}{3}{}%
+\contentsline {subsection}{\numberline {3.2}Marketing-Mix (4P)}{3}{}%
+\contentsline {subsection}{\numberline {3.3}Produktgestaltung}{3}{}%
+\contentsline {subsection}{\numberline {3.4}Preispolitik}{3}{}%
+\contentsline {section}{\numberline {4}Finanzen I – Bilanz \& Erfolgsrechnung}{3}{}%
+\contentsline {subsection}{\numberline {4.1}Erfolgsrechnung}{3}{}%
+\contentsline {subsection}{\numberline {4.2}Doppelte Buchhaltung}{3}{}%
+\contentsline {section}{\numberline {5}Finanzen II – Cashflow \& Kennzahlen}{4}{}%
+\contentsline {subsection}{\numberline {5.1}Cashflow}{4}{}%
+\contentsline {subsection}{\numberline {5.2}Investitionsdreieck}{4}{}%
+\contentsline {subsection}{\numberline {5.3}Kennzahlen-Liquidität}{4}{}%
+\contentsline {subsection}{\numberline {5.4}Kennzahlen-Sicherheit}{4}{}%
+\contentsline {section}{\numberline {6}Betriebsbuchhaltung (Voll- und Teilkostenrechnung)}{4}{}%
+\contentsline {subsection}{\numberline {6.1}Vollkostenrechnung}{4}{}%
+\contentsline {subsection}{\numberline {6.2}Teilkostenrechnung}{5}{}%
+\contentsline {section}{\numberline {7}Kalkulation}{5}{}%
+\contentsline {subsection}{\numberline {7.1}Industriebetrieb}{5}{}%
+\contentsline {subsection}{\numberline {7.2}Handelsbetrieb – Dreistufige Kalkulation}{5}{}%
+\contentsline {section}{\numberline {8}Materialwirtschaft}{5}{}%
+\contentsline {subsection}{\numberline {8.1}Bestandteile}{6}{}%
+\contentsline {subsection}{\numberline {8.2}Beschaffungsprozesse}{6}{}%
+\contentsline {subsection}{\numberline {8.3}Beschaffungsobjekte}{6}{}%
+\contentsline {subsection}{\numberline {8.4}Beschaffungskonzepte}{6}{}%
+\contentsline {subsection}{\numberline {8.5}magisches Dreieck Materialwirtschaft}{6}{}%
+\contentsline {subsection}{\numberline {8.6}ABC-Analysse (Pareto-Prinzip)}{6}{}%
+\contentsline {subsection}{\numberline {8.7}XYZ-Analysse (Vorhersagebarkeit)}{6}{}%
+\contentsline {subsection}{\numberline {8.8}Lagerlogistik / Lagerfunktion}{6}{}%
+\contentsline {subsection}{\numberline {8.9}Durchschnittlicher Lagerbestand}{6}{}%
+\contentsline {section}{\numberline {9}Personalmanagement}{6}{}%
+\contentsline {subsection}{\numberline {9.1}Hauptaufgaben}{6}{}%
+\contentsline {subsection}{\numberline {9.2}Personalplanung}{6}{}%
+\contentsline {subsection}{\numberline {9.3}Personalgewinnung}{7}{}%
+\contentsline {subsection}{\numberline {9.4}Kirterien Personalauswahl}{7}{}%
+\contentsline {subsection}{\numberline {9.5}Personalentwicklung}{7}{}%
+\contentsline {subsection}{\numberline {9.6}Personalhonorierung}{7}{}%
+\contentsline {section}{\numberline {10}Investitionsrechnung}{7}{}%
+\contentsline {subsection}{\numberline {10.1}Statische Verfahren}{7}{}%
+\contentsline {subsubsection}{\numberline {10.1.1}Kostenvergleich}{7}{}%
+\contentsline {subsubsection}{\numberline {10.1.2}Gewinnvergleich}{7}{}%
+\contentsline {subsubsection}{\numberline {10.1.3}Rentabilität (ROI)}{8}{}%
+\contentsline {subsubsection}{\numberline {10.1.4}Amortisationsrechnung (Payback)}{8}{}%
+\contentsline {subsection}{\numberline {10.2}Dynamische Verfahren}{8}{}%
+\contentsline {subsubsection}{\numberline {10.2.1}Aufzinsung}{8}{}%
+\contentsline {subsubsection}{\numberline {10.2.2}Abzinsung}{8}{}%
+\contentsline {subsubsection}{\numberline {10.2.3}Kapitalwertmethode (NPV)}{8}{}%
+\contentsline {section}{\numberline {11}Realisation}{8}{}%
+\contentsline {subsection}{\numberline {11.1}Wertschöpfungsmanagement}{8}{}%
+\contentsline {subsection}{\numberline {11.2}Wertschöpfungskette}{8}{}%
+\contentsline {subsection}{\numberline {11.3}Wertschöpfungsarchitektur}{8}{}%
+\contentsline {subsection}{\numberline {11.4}Produktionslogistik}{8}{}%
+\contentsline {subsection}{\numberline {11.5}Produktionsprogramm}{8}{}%
+\contentsline {subsection}{\numberline {11.6}Fertigungsstrategien}{8}{}%
+\contentsline {subsection}{\numberline {11.7}Produktionsplanung und -steuerung (PPS)}{9}{}%
+\contentsline {subsection}{\numberline {11.8}Terminplanung}{9}{}%
+\contentsline {subsubsection}{\numberline {11.8.1}Terminierung}{9}{}%
+\contentsline {section}{\numberline {12}Nachhaltiges Wirtschaften}{9}{}%
+\contentsline {subsection}{\numberline {12.1}Drei-Säulen-Modell (Triple Bottom Line)}{9}{}%
+\contentsline {subsection}{\numberline {12.2}Nachhaltigkeitsziele (SDGs)}{9}{}%
+\contentsline {subsection}{\numberline {12.3}Verantwortungsbereiche (Scopes)}{9}{}%
+\contentsline {subsection}{\numberline {12.4}Motivation für Unternehmen}{9}{}%
+\contentsline {subsection}{\numberline {12.5}CSR – Corporate Social Responsibility}{9}{}%
+\contentsline {subsection}{\numberline {12.6}Greenwashing}{9}{}%

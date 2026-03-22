@@ -1,0 +1,25 @@
+\contentsline {section}{\numberline {1}C Variable Name Rules (Quick Summary)}{1}{}%
+\contentsline {section}{\numberline {2}printf Format Specifiers}{1}{}%
+\contentsline {section}{\numberline {3}C Bitwise Operators}{2}{}%
+\contentsline {section}{\numberline {4}Pointer Arithmetic}{2}{}%
+\contentsline {subsection}{\numberline {4.1}Pointer Precedence}{2}{}%
+\contentsline {subsection}{\numberline {4.2}Effect of Type}{2}{}%
+\contentsline {subsection}{\numberline {4.3}Pointer Difference}{2}{}%
+\contentsline {section}{\numberline {5}Calculations with different Datatypes}{3}{}%
+\contentsline {subsection}{\numberline {5.1}base rule}{3}{}%
+\contentsline {subsection}{\numberline {5.2}examples}{3}{}%
+\contentsline {subsubsection}{\numberline {5.2.1}intieger calculation}{3}{}%
+\contentsline {subsubsection}{\numberline {5.2.2}int/float calculation}{3}{}%
+\contentsline {subsubsection}{\numberline {5.2.3}cast/float calculation}{3}{}%
+\contentsline {subsubsection}{\numberline {5.2.4}char calculation}{3}{}%
+\contentsline {subsubsection}{\numberline {5.2.5}modulo calculation}{3}{}%
+\contentsline {subsubsection}{\numberline {5.2.6}printf Output}{3}{}%
+\contentsline {subsection}{\numberline {5.3}flaotingpoints}{3}{}%
+\contentsline {subsection}{\numberline {5.4}Grundregel}{3}{}%
+\contentsline {subsection}{\numberline {5.5}Gleitkomma-Literals}{3}{}%
+\contentsline {subsection}{\numberline {5.6}Implizite Typenumwandlung}{3}{}%
+\contentsline {subsection}{\numberline {5.7}Suffixe}{3}{}%
+\contentsline {subsection}{\numberline {5.8}Vergleiche von Fliesskommzahlen}{3}{}%
+\contentsline {subsection}{\numberline {5.9}arrays}{4}{}%
+\contentsline {subsection}{\numberline {5.10}struct}{4}{}%
+\contentsline {section}{\numberline {6}speicher}{4}{}%

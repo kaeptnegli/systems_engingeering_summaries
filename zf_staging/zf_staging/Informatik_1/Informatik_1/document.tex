@@ -1,0 +1,445 @@
+\documentclass[a4paper,9pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage[
+top=0cm,
+bottom=1.5cm,
+left=0.5cm,
+right=0.5cm
+]{geometry}
+
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    backgroundcolor=\color{gray!10},
+    frame=single
+}
+
+\title{C Cheat Sheet – Zusammenfassung}
+\author{}
+\date{}
+
+\begin{document}
+    %\maketitle
+    %\tableofcontents
+    
+    \section{C Variable Name Rules (Quick Summary)}
+    \begin{multicols}{2}
+        \subsection*{Allowed}
+        \begin{itemize}
+            \item Letters: \texttt{a--z}, \texttt{A--Z}
+            \item Digits: \texttt{0--9} (not as first character)
+            \item Underscore: \texttt{\_}
+            \item Dollar sign: \texttt{\$} (allowed, but not portable)
+        \end{itemize}
+        
+        \subsection*{Not Allowed}
+        \begin{itemize}
+            \item Starting with a digit (\texttt{1value})
+            \item Spaces (\texttt{total sum})
+            \item Special characters (\texttt{value@x}, \texttt{my-var})
+            \item C keywords (\texttt{int}, \texttt{return}, \texttt{while})
+            \item Empty names (\texttt{int ;})
+        \end{itemize}
+        
+        \subsection*{Compiles but Bad Practice}
+        \begin{itemize}
+            \item Names starting with \texttt{\_}
+            \item Very short or confusing names (\texttt{l}, \texttt{O})
+        \end{itemize}
+        
+        \subsection*{Examples}
+        \begin{lstlisting}
+        int count;
+        int total_sum;
+        int value2;
+        int _temp;     // legal but discouraged
+        int $VOLUME;   // legal but not portable
+        \end{lstlisting}
+    \end{multicols}
+    
+    \section{printf Format Specifiers}
+    \begin{multicols}{2}
+    \subsection*{Characters \& Strings}
+    \begin{tabular}{lll}
+        \toprule
+        Specifier & Expects type & Meaning \\
+        \midrule
+        \texttt{\%c} & int & Single character \\
+        \texttt{\%s} & char* & Null-terminated string \\
+        \bottomrule
+    \end{tabular}
+    
+    \subsection*{Integers}
+    \begin{tabular}{lll}
+        \toprule
+        Specifier & Expects type & Meaning \\
+        \midrule
+        \texttt{\%d}, \texttt{\%i} & int & Signed integer \\
+        \texttt{\%u} & unsigned int & Unsigned decimal \\
+        \texttt{\%o} & unsigned int & Octal \\
+        \texttt{\%x}, \texttt{\%X} & unsigned int & Hexadecimal \\
+        \bottomrule
+    \end{tabular}
+    
+    \subsection*{Long Integers}
+    \begin{tabular}{ll}
+        \toprule
+        Specifier & Expects type \\
+        \midrule
+        \texttt{\%ld} & long int \\
+        \texttt{\%lu} & unsigned long int \\
+        \texttt{\%lld} & long long int \\
+        \texttt{\%llu} & unsigned long long int \\
+        \bottomrule
+    \end{tabular}
+    
+    \subsection*{Floating Point}
+    \begin{tabular}{lll}
+        \toprule
+        Specifier & Expects type & Meaning \\
+        \midrule
+        \texttt{\%f}, \texttt{\%lf} & double & Fixed-point \\
+        \texttt{\%e} & double & Scientific notation \\
+        \texttt{\%g} & double & Shortest of \%f / \%e \\
+        \bottomrule
+    \end{tabular}
+    
+    \subsection*{Pointers \& Misc}
+    \begin{itemize}
+        \item \texttt{\%p} – pointer (\texttt{void*})
+        \item \texttt{\%\%} – print \%
+        \item \texttt{\%n} – store printed char count (dangerous!)
+    \end{itemize}
+    
+    \subsection*{Critical Rules}
+    \begin{itemize}
+        \item \texttt{\%s} requires a valid null-terminated string
+        \item Wrong specifier $\Rightarrow$ undefined behavior
+        \item \texttt{char}, \texttt{short} $\rightarrow$ promoted to \texttt{int}
+        \item \texttt{float} $\rightarrow$ promoted to \texttt{double}
+    \end{itemize}
+    \end{multicols}
+    
+    \section{C Bitwise Operators}
+    
+    \begin{tabular}{lll}
+        \toprule
+        Operator & Name & Description \\
+        \midrule
+        \texttt{\&} & AND & Bit = 1 if both bits are 1 \\
+        \texttt{|} & OR & Bit = 1 if either bit is 1 \\
+        \texttt{\^{}} & XOR & Bit = 1 if bits differ \\
+        \texttt{\~{}} & NOT & Invert all bits \\
+        \texttt{<<} & Left shift & Shift bits left \\
+        \texttt{>>} & Right shift & Shift bits right \\
+        \bottomrule
+    \end{tabular}
+    
+    \subsection*{Example}
+    \begin{lstlisting}
+        int a = 6; // 110
+        int b = 3; // 011
+        a & b; // 2
+        a | b; // 7
+        a ^ b; // 5
+    \end{lstlisting}
+    
+    \section{Pointer Arithmetic}
+    
+    \subsection*{Fundamental Rule}
+    \[
+    p + n = \text{address} + n \cdot \text{sizeof}(T)
+    \]
+    
+    \begin{multicols}{2}
+        \subsection*{Valid Operations}
+        \begin{itemize}
+            \item \texttt{p++}, \texttt{p--}
+            \item \texttt{p + n}, \texttt{p - n}
+            \item \texttt{p2 - p1} (same array only)
+        \end{itemize}
+        
+        \subsection*{Invalid Operations}
+        \begin{itemize}
+            \item \texttt{p + q}
+            \item \texttt{p * 2}, \texttt{p / 2}
+        \end{itemize}
+        
+        \subsection*{Arrays \& Pointers}
+        \begin{lstlisting}
+int a[5];
+int *p = a;   // same as &a[0]
+p[i] == *(p + i);
+        \end{lstlisting}
+        
+        \subsection*{const Pointers}
+        \begin{tabular}{|c|c|}
+            \hline
+            const int *p & Wert konstant \\
+            \hline
+            int *const p & Pointer konstant \\
+            \hline
+            const inr *const p & beides konstant \\
+            \hline
+        \end{tabular}
+        
+        \subsection{Pointer Precedence}
+        \begin{lstlisting}
+*p++ // *(p++) p is increased
+(*p)++ // value is increased
+*p + 1   // Value + 1
+*(p + 1) // next element
+        \end{lstlisting}
+        
+        \subsection{Effect of Type}
+        \begin{lstlisting}
+int *p;     p + 1   // +sizeof(int) (4 bytes)  
+double *d;  d + 1   // +sizeof(double) (8 bytes)  
+char *c;    c + 1   // +1 byte  
+        \end{lstlisting}
+        
+        \subsection{Pointer Difference}
+        \begin{lstlisting}
+int a[10];  
+int *p1 = &a[2];  
+int *p2 = &a[7];  
+p2 - p1   // 5   
+        \end{lstlisting}
+        
+        \subsection*{Golden Rule}
+        \begin{center}
+            \textbf{Pointer arithmetic moves in ELEMENTS, not BYTES.}\\
+            \textbf{Pointers may only be dereferenced if the point on to valid memory}
+        \end{center}
+    \end{multicols}
+    
+    \section{Calculations with different Datatypes}
+    
+    \subsection{base rule}
+    smaler type becomes bigger type
+    \begin{lstlisting}
+        char -> short -> int -> long -> float -> double -> long double 
+    \end{lstlisting}
+    
+    \subsection{examples}
+    \begin{multicols}{2}
+        \subsubsection{intieger calculation}
+        \begin{lstlisting}
+    int a = 5, b = 2;
+    int c = a / b;   // 2
+    float d = c; // 2.0
+        \end{lstlisting}
+        \subsubsection{int/float calculation}
+        \begin{lstlisting}
+    int a = 5;
+    float b = 2;
+    float c = a / b;     // 2.5
+        \end{lstlisting}
+        \subsubsection{cast/float calculation}
+        \begin{lstlisting}
+    float x = 5.0 / 2;   // 2.5
+    float x = 5 / 2.0;   // 2.5
+    float x = (float)5/2; // 2.5
+        \end{lstlisting}
+        \subsubsection{char calculation}
+        \begin{lstlisting}
+    char c = 'A';
+    int x = c + 1;       //66
+    printf("%c\n", 'A' + 2); //C
+        \end{lstlisting}
+        \subsubsection{modulo calculation}
+        \begin{lstlisting}
+    5 % 2;        // 1
+    // 5.0 % 2;  // Error
+        \end{lstlisting}
+        \subsubsection{printf Output}
+        \begin{lstlisting}
+    printf("%f\n", 5 / 2);   // 2.000000
+    printf("%d\n", (int)5.9); // 5
+        \end{lstlisting}
+    \end{multicols}
+    
+    \subsection{flaotingpoints}
+    
+    \begin{multicols}{2}
+        \subsection{Grundregel}
+        Gleitkommazahlen ohne Suffix sind `double`
+        \begin{lstlisting}
+            3.0      // double
+            3.0f     // float
+            3.0F     // float
+        \end{lstlisting}
+        \subsection{Gleitkomma-Literals}
+        Gleitkommazahlen ohne Suffix sind `double`
+        \begin{lstlisting}
+            9.1
+            9.1f
+            7.4e2
+            7.4e2f
+            1e-3
+        \end{lstlisting}
+        nicht erlaubt!
+        \begin{lstlisting}
+    3.5f2     // f darf nicht in der Mitte stehen
+    7.4ef     // e braucht eine Zahl
+    e2        // incomplete
+        \end{lstlisting}
+        \subsection{Implizite Typenumwandlung}
+        erlaubt
+        \begin{lstlisting}
+            float  -> double  
+            int    -> double   
+            int    -> float    
+        \end{lstlisting}
+        problematisch
+        \begin{lstlisting}
+        double -> float 
+        \end{lstlisting}
+        \subsection{Suffixe}
+        \begin{tabular}{|c|c|}
+            \hline
+            keins & double \\
+            \hline
+            f/F & float \\
+            \hline
+            e & Exponentialsschreibweise \\
+            \hline
+            e2 & $10^2$ (double)\\
+            \hline
+            e-3f & $10^{-3}$ (float) \\
+            \hline
+        \end{tabular}\\
+        Example
+        \begin{lstlisting}
+            7.4e2    // double (740)
+            7.4e2f   // float  (740)    
+        \end{lstlisting}
+    \end{multicols}
+    \subsection{Vergleiche von Fliesskommzahlen}
+    \begin{multicols}{2}
+        \begin{lstlisting}
+            double a = 0.1 + 0.2;
+            double b = 0.3;
+            double epsilon = 1e-9
+            
+            if (fabs(a - b) < epsilon)
+        \end{lstlisting}
+        \begin{tabular}{|c|c|}
+            \hline
+            typ & epsilon \\
+            \hline
+            float & 1e-6 \\
+            \hline
+            double & 1e-9 oder 1e-12 \\
+            \hline
+        \end{tabular}\\
+    \end{multicols}
+    \section{fibonacci}
+    \begin{lstlisting}
+        int fibonacci(int num)
+        {
+            if (num <= 1) {
+                return num;
+            }
+            return fibonacci(num-2)+fibonacci(num-1);
+        }
+    \end{lstlisting}
+    \pagebreak
+    \subsection{arrays}
+    \begin{multicols}{2}
+        \textbf{initliasisierung}
+        \begin{lstlisting}
+int x[5] = {1,2,3};    // Rest automatisch 0
+int y[]  = {4,5,6};   // Size = 3
+        \end{lstlisting}
+        \textbf{Zugriff}
+        \begin{lstlisting}
+a[i]      // lesen
+a[i] = 7; // schreiben
+        \end{lstlisting}
+        \textbf{Size}
+        \begin{lstlisting}
+sizeof(a)            // gesamte Bytes
+sizeof(a)/sizeof(a[0])  // Anzahl Elemente
+        \end{lstlisting}
+        \textbf{Functiona argument}
+        \begin{lstlisting}
+void f(int a[], int n);
+        \end{lstlisting}
+    \end{multicols}
+    \subsection{struct}
+             \textbf{Struct}
+    \begin{lstlisting}
+        struct Point {
+            int x;
+            int y;
+        };
+    \end{lstlisting}
+    \textbf{Deklaration und Verwendung}
+    \begin{lstlisting}
+        struct Point p;
+        p.x = 3;
+        p.y = 4;
+    \end{lstlisting}
+    \textbf{Initialisierung}
+    \begin{lstlisting}
+        struct Point p1 = {3, 4}; // Reihenfolge wichtig
+        struct Point p2 = {.y = 4, .x = 3}; // Designated initializer
+    \end{lstlisting}
+    \textbf{typedef}
+    \begin{lstlisting}
+        typedef struct {
+            double x;
+            double y;
+        } Point;
+        
+        Point p;    // no "struct" needed
+    \end{lstlisting}
+    \textbf{Zugriff: Pointer}
+    \begin{lstlisting}
+        p.x        // Access direkt
+        ptr->x     // Access via Pointer
+        (*ptr).x   // exakt gleich wie ptr->x
+    \end{lstlisting}
+    \begin{lstlisting}
+        ptr->x  =  (*ptr).x
+    \end{lstlisting}
+        \textbf{Strcut über Pointer verändern}
+    \begin{lstlisting}
+        void move(Point *p) {
+            p->x += 1;
+            p->y += 1;
+        }
+    \end{lstlisting}
+    \begin{lstlisting}
+        move(&p);
+    \end{lstlisting}
+   \textbf{Übergabe an Funktionen}
+   \begin{lstlisting}
+       by value (Kopie)
+       
+       void f(Point p);
+   \end{lstlisting}
+   \begin{lstlisting}
+       by reference (empfohlen)
+       
+       void f(Point *p);
+   \end{lstlisting}
+   
+   \section{speicher}
+    \begin{lstlisting}
+        int *ptr = (int *)malloc(sizeof(int) * 5);
+        // Populate the array
+        for (int i = 0; i < 5; i++)
+        ptr[i] = i + 1;
+    \end{lstlisting}
+    
+\end{document}

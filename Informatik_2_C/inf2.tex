@@ -1,0 +1,417 @@
+\documentclass[a4paper,9pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\usepackage[margin=1.2cm]{geometry}
+
+\setlist{noitemsep, topsep=1pt, parsep=0pt}
+\setlength{\parskip}{1pt}
+\setlength{\parindent}{0pt}
+
+\tcbset{
+	colback=gray!10, colframe=gray!40,
+	boxsep=1pt, top=1pt, bottom=1pt, left=2pt, right=2pt,
+	fontupper=\small
+}
+
+\definecolor{codebg}{rgb}{0.95,0.95,0.95}
+\definecolor{commentcolor}{rgb}{0.4,0.4,0.4}
+\definecolor{keywordcolor}{rgb}{0.0,0.3,0.7}
+\definecolor{stringcolor}{rgb}{0.6,0.1,0.1}
+
+\lstset{
+	language=C,
+	backgroundcolor=\color{codebg},
+	basicstyle=\ttfamily\footnotesize,
+	keywordstyle=\color{keywordcolor}\bfseries,
+	commentstyle=\color{commentcolor}\itshape,
+	stringstyle=\color{stringcolor},
+	showstringspaces=false,
+	frame=single, framerule=0pt,
+	rulecolor=\color{codebg},
+	breaklines=true,
+	tabsize=2,
+	aboveskip=2pt, belowskip=2pt,
+	escapeinside={(*@}{@*)},
+}
+
+\begin{document}
+	\tableofcontents
+	\newpage
+	
+	%---------------------------------------------------------------
+	\section{Dateien}
+	Nur Byte-Streams; weitere Organisation Aufgabe des Programms.
+	
+	\textbf{Textdatei:} Zeichencodes (UTF-8, Latin-1, ASCII); C unterstützt eigentlich nur ASCII.\\
+	\textbf{Binärdatei:} Raw bytes, keine Zeichenkodierung; Programm muss Aufbau kennen (Magic Numbers).
+	
+	\subsubsection{fopen}
+	\begin{lstlisting}
+		FILE *fd = fopen(path, "r");
+		if (!fd) perror("fopen");
+		// Modi: r, w, a, rb, wb
+	\end{lstlisting}
+	
+	\subsubsection{fprintf / fscanf}
+	\begin{lstlisting}
+		// int fprintf(FILE *stream, const char *fmt, ...);
+		fprintf(fp, "Hello %s\n", name);  // ret: Anzahl Zeichen
+		
+		// int fscanf(FILE *stream, const char *fmt, ...);
+		fscanf(f, "%d", &x);  // besser: fgets + strtok
+	\end{lstlisting}
+	
+	\subsubsection{fputc / fgetc / fputs / fgets}
+	\begin{lstlisting}
+		int fputc(int c, FILE *stream); // einzelnes Zeichen schreiben
+		int fgetc(FILE *stream); // einzelnes Zeichen lesen
+		int fputs(const char *s, FILE *stream); // ganzen String schreiben
+		char *fgets(char *s, int n, FILE *stream); // Zeichen bis '\n' in String-Buffer lesen, maximal num-1 Zeichen
+		
+		// typisches Lesen mit strtok:
+		while (fgets(buf, STR_LEN, fd) != NULL) {
+			char *tok = strtok(buf, ";\n");
+			strcpy(list[i].name, tok);
+			tok = strtok(NULL, ";\n");
+			list[i].rang = atoi(tok);
+		}
+	\end{lstlisting}
+	
+	\subsubsection{strtok}
+	\begin{lstlisting}
+		// char *strtok(char *str, const char *delim);
+		// Erster Aufruf: str; danach NULL. Modifiziert Original!
+		char *tok = strtok(s, ",");
+		while (tok != NULL) { tok = strtok(NULL, ","); }
+	\end{lstlisting}
+	
+	\subsubsection{fflush / fclose / remove}
+	\begin{lstlisting}
+		fflush(f);           // Puffer sofort schreiben
+		fclose(f);           // Puffer leeren + schliessen
+		remove("data.txt");  // Datei loeschen
+	\end{lstlisting}
+	
+	\subsubsection{fseek / ftell / rewind}
+	\begin{lstlisting}
+		// int fseek(FILE *stream, long offset, int whence);
+		// whence: SEEK_SET, SEEK_CUR, SEEK_END
+		fseek(f, 4, SEEK_SET);
+		long size = ftell(f);
+		rewind(f);  // == fseek(f, 0, SEEK_SET)
+	\end{lstlisting}
+	
+	%---------------------------------------------------------------
+	\section{Präprozessor \& Modulkonzept}
+	
+	\textbf{Build-Pipeline:} Präprozessor → Compiler (.o) → Linker → Loader
+	
+	\subsubsection{Direktiven}
+	\begin{lstlisting}
+		#include <stdio.h>       // Systemverzeichnis
+		#include "datei.h"       // Projektverzeichnis
+		
+		#define ANZAHL 100
+		#define QUADRAT(X) ((X)*(X))  // Klammern wichtig!
+		// QUADRAT(3+5) ohne Klammern -> 3+5*3+5=23 statt 64
+		
+		#ifdef DEBUG
+		printf("debug\n");
+		#endif  // Aktivieren: gcc -DDEBUG ...
+	\end{lstlisting}
+	
+	\subsubsection{Include Guard}
+	\begin{lstlisting}
+		#ifndef MEINE_DEFS_H
+		#define MEINE_DEFS_H
+		// Inhalt der Header-Datei
+		#endif
+	\end{lstlisting}
+	
+	\subsubsection{Modulkonzept}
+	\begin{lstlisting}
+		// doit.h
+		#ifndef DOIT_H
+		#define DOIT_H
+		#define MAX 1000
+		int doit(int b);
+		#endif
+		
+		// doit.c
+		#include "doit.h"
+		int doit(int b) { return MAX + b; }
+		
+		// gcc -c main.c && gcc -c doit.c && gcc -o prog *.o
+	\end{lstlisting}
+	
+	\subsubsection{Sichtbarkeit}
+	\begin{lstlisting}
+		int globalFunc(int a) { ... }        // ueberall sichtbar
+		static int lokalFunc(int b) { ... }  // nur im Modul
+	\end{lstlisting}
+	
+	\subsubsection{Prinizipien Modularisierung}
+	\begin{tabular}{ll}
+		\textbf{Geringe Vernetzung}  & wenige Schnittstellen \\
+		\textbf{Schwache Koppplung} & schmale Schnittstellen \\
+		\textbf{Hohe Kohäsion}  & inhaltliche Einheit - wohledfinierte Aufgabe \\
+		\textbf{Explizite Schnittstelle} & Kommunikation mit Parameterübergrabe \\
+		\textbf{Information Hiding} & nur global was muss; Verstecken Implementationsdetails; Trennung Interface \& Implementation \\
+	\end{tabular}
+
+	
+	%---------------------------------------------------------------
+	\section{Dynamische Speicherverwaltung}
+	
+	\begin{tabular}{ll}
+		\textbf{Code}  & Programmcode \\
+		\textbf{Daten} & globale/statische Variablen \\
+		\textbf{Heap}  & dynamisch alloziert \\
+		\textbf{Stack} & lokale Variablen (temporär) \\
+	\end{tabular}
+	
+	\begin{tcolorbox}
+		Keine Adresse lokaler Variablen zurückgeben -- Stack wird nach \texttt{return} abgebaut!
+	\end{tcolorbox}
+	
+	\subsubsection{Funktionen (\texttt{<stdlib.h>})}
+	\begin{lstlisting}
+		void *malloc(size_t size);             // anfordern
+		void  free(void *ptr);                 // freigeben
+		void *calloc(size_t num, size_t size); // anfordern + 0
+		void *realloc(void *ptr, size_t size); // Groesse anpassen
+	\end{lstlisting}
+	Immer \texttt{NULL}-Check nach \texttt{malloc}; \texttt{ptr = NULL} nach \texttt{free}.
+	
+	\subsubsection{Beispiele}
+	\begin{lstlisting}
+		// Array
+		int  *arr = malloc(n * sizeof(int));   
+		free(arr); 
+		arr=NULL;
+		// Struct
+		Zeit *pZ  = malloc(sizeof(Zeit));      
+		pZ->h = 4; 
+		free(pZ);
+		
+		// String: erst grosser Buffer, dann passend
+		char *buf = malloc(256);
+		fgets(buf, 256, stdin);
+		char *s = malloc(strlen(buf) + 1);
+		strcpy(s, buf);  free(buf);  free(s);
+	\end{lstlisting}
+	
+	\subsubsection{2D-Arrays}
+	\begin{lstlisting}
+		// Variante 1: 1D, Index manuell
+		int *a = malloc(rows * cols * sizeof(int));
+		a[i*cols + j] = ...;
+		
+		// Variante 2: Array von Zeigern (a[i][j])
+		int **a = malloc(rows * sizeof(int *));
+		for (int i = 0; i < rows; i++)
+		a[i] = malloc(cols * sizeof(int));
+		for (int i = 0; i < rows; i++) free(a[i]);
+		free(a);
+	\end{lstlisting}
+	
+	\subsubsection{Typische Fehler}
+	\begin{lstlisting}
+		double *p = malloc(n * sizeof(n));      // FALSCH: sizeof(n)
+		double *p = malloc(n * sizeof(double)); // korrekt
+		Datum  *d = malloc(10 * sizeof(Datum*));// FALSCH: sizeof(Datum*)
+		Datum  *d = malloc(10 * sizeof(Datum)); // korrekt
+		
+		int *ptr = malloc(...);
+		ptr = &array[0];  // Memory Leak: Heap verloren!
+	\end{lstlisting}
+	
+	%---------------------------------------------------------------
+	\section{Verkettete Liste}
+	
+	\begin{tcolorbox}
+		Arrays: Lücken beim Entfernen $\Rightarrow$ teures Umkopieren. Listen: individuelle Allokation pro Element.
+	\end{tcolorbox}
+	
+	\begin{lstlisting}
+		typedef struct ListElem_s {
+			char name[16]; char first[16]; int rank;
+			struct ListElem_s *next;
+		} ListElem;
+	\end{lstlisting}
+	
+	\subsubsection{Element einfügen}
+	\begin{lstlisting}
+		// Mittendrin (nach item): Reihenfolge wichtig!
+		newItem->next = item->next;
+		item->next    = newItem;
+		
+		// Am Anfang:
+		newItem->next = head;  head = newItem;
+		
+		// Am Ende:
+		while (item->next != NULL) item = item->next;
+		item->next = newItem;  newItem->next = NULL;
+	\end{lstlisting}
+	
+	\subsubsection{Element entfernen}
+	\begin{lstlisting}
+		// Nach item:
+		delPtr = item->next;  item->next = delPtr->next;
+		free(delPtr);
+		
+		// Am Anfang:
+		delPtr = head;  head = head->next;  free(delPtr);
+		
+		// Am Ende:
+		while (delPtr->next != NULL)
+		{ delPtr = delPtr->next; item = item->next; }
+		item->next = NULL;  free(delPtr);
+	\end{lstlisting}
+	
+	\subsubsection{Liste ausgeben}
+	\begin{lstlisting}
+		for (ListElem *it = head; it != NULL; it = it->next)
+		printf("%s %s\n", it->first, it->name);
+	\end{lstlisting}
+	
+	\subsubsection{Varianten}
+	\textbf{Ankerelement:} Dummy-Head eliminiert Sonderfall am Anfang.\\
+	\textbf{Tail-Zeiger:} append O(1) statt O(n).\\
+	\textbf{Doppelt verkettet:} \texttt{prev}-Zeiger für Navigation in beide Richtungen.
+	
+	\subsubsection{Anwendungen \& Fehler}
+	\textbf{Queue (FIFO):} enqueue / dequeue an verschiedenen Enden.\\
+	\textbf{Stack (LIFO):} push / pop am selben Ende.\\
+	\textbf{Binärbaum:} left/right-Zeiger, Suche O(log n).
+	
+	\begin{itemize}
+		\item Speicher zu früh freigeben $\Rightarrow$ Pointer verloren
+		\item Falsche Reihenfolge beim Umhängen $\Rightarrow$ Liste abgetrennt
+		\item \texttt{free()} vergessen $\Rightarrow$ Memory Leak
+	\end{itemize}
+	
+	%---------------------------------------------------------------
+	\section{Strings}
+	\begin{lstlisting}
+		char  c      = 'A';     // Char-Literal: 1 Zeichen, Typ char
+		char *s      = "Hallo"; // String-Literal: Zeiger, read-only
+		char  arr[64];          // Array: fixer Speicher, beschreibbar
+	\end{lstlisting}
+	
+	\subsubsection{Zuweisung}
+	\begin{lstlisting}
+		char arr[] = "Max";      // OK -- bei Deklaration
+		arr[0] = '\0';           // OK -- einzelnes Zeichen
+		strcpy(arr, "Max");      // OK -- ganzen String kopieren
+		arr    = "Max";          // (*@\textcolor{red}{FEHLER}@*) -- Array ist kein l-value
+		arr[0] = "\0";           // (*@\textcolor{red}{FEHLER}@*) -- String-Literal != char
+	\end{lstlisting}
+	
+	\begin{center}
+		\begin{tabular}{lll}
+			\toprule
+			& \texttt{'\textbackslash0'} & \texttt{"\textbackslash0"} \\
+			\midrule
+			Typ    & \texttt{char} (1 B)  & \texttt{char*} \\
+			Wert   & Zeichen-Wert         & Adresse \\
+			Grösse & 1 Byte               & 2 Bytes \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	
+	\begin{tabular}{ll}
+		\toprule
+		Situation & Typ \\
+		\midrule
+		Struct-Member              & \texttt{char name[N]} \\
+		Dynamische Länge           & \texttt{char*} + malloc \\
+		Funktionsparameter (lesen) & \texttt{const char*} \\
+		\bottomrule
+	\end{tabular}
+	
+	\begin{tcolorbox}
+		\texttt{char name[N]} wann immer möglich -- kein malloc, kein free, keine Leaks.
+	\end{tcolorbox}
+	
+	\begin{lstlisting}
+		typedef struct { char first[64]; char name[64]; } Participant;
+		memset(p, 0, sizeof(Participant));  // alles auf 0/NULL
+	\end{lstlisting}
+	
+	%---------------------------------------------------------------
+	\section{Arrays}
+	\begin{lstlisting}
+		int a[5];                         // uninitialisiert
+		int a[5] = {1, 2, 3, 4, 5};      // vollstaendig
+		int a[]  = {1, 2, 3, 4, 5};      // Groesse auto
+		int a[5] = {1, 2};                // Rest = 0
+		int a[5] = {0};                   // alles 0
+		int *a   = (int[]){1,2,3};        // Compound Literal (C99)
+		
+		a[2] = 42;   int x = a[2];   *(a+2) = 42;  // aequivalent
+	\end{lstlisting}
+	
+	\subsubsection{Arrays \& Pointer}
+	\texttt{a == \&a[0]}; \texttt{a[i]} $\equiv$ \texttt{*(a+i)}
+	\begin{lstlisting}
+		int *p = a;  p[2];  *(p+2);  // alle gleich wie a[2]
+	\end{lstlisting}
+	
+	\subsubsection{Mehrdimensional}
+	\begin{lstlisting}
+		int m[3][4] = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};
+		m[1][2] = 42;
+	\end{lstlisting}
+	
+	\subsubsection{Als Funktionsparameter}
+	\begin{lstlisting}
+		void foo(int *a, int n);    // als Pointer
+		void foo(int a[], int n);   // aequivalent
+		void foo(int a[10], int n); // Groesse wird ignoriert
+	\end{lstlisting}
+	\begin{tcolorbox}
+		Arrays werden \textbf{immer als Pointer} übergeben -- Länge separat mitgeben.
+	\end{tcolorbox}
+	
+	%---------------------------------------------------------------
+	\section{Structs}
+	\begin{lstlisting}
+		typedef struct { char name[16]; int rank; } Person;
+		
+		Person p;                                  // uninitialisiert
+		Person p = {"Muster", 1};                 // positionsbasiert
+		Person p = {.name="Muster", .rank=1};     // designated init
+	\end{lstlisting}
+	
+	\subsubsection{Member-Zugriff}
+	\begin{lstlisting}
+		p.rank = 1;         // direkt: . Operator
+		p.name[0];          // Array-Member
+		
+		Person *ptr = &p;
+		ptr->rank = 1;      // ueber Pointer: -> Operator
+		(*ptr).rank = 1;    // aequivalent, unueblich
+	\end{lstlisting}
+	
+	\begin{tcolorbox}
+		\texttt{p.member} wenn \texttt{p} ein Struct ist.\\
+		\texttt{p->member} wenn \texttt{p} ein Pointer ist $\equiv$ \texttt{(*p).member}
+	\end{tcolorbox}
+	
+	\subsubsection{Funktionsparameter \& malloc}
+	\begin{lstlisting}
+		void foo(Person p);   // Kopie -- lokale Aenderungen
+		void foo(Person *p);  // Pointer -- wirkt auf Original
+		
+		Person *p = malloc(sizeof(Person));
+		p->rank = 1;  free(p);
+	\end{lstlisting}
+	
+\end{document}
