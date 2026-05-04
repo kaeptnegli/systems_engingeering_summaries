@@ -1,264 +1,488 @@
-\documentclass[9pt,a4paper]{article}
+\documentclass[10pt,a4paper,twocolumn]{article}
 
-% ---- Strong compact layout (single column) ----
-\usepackage[a4paper,margin=0.5cm]{geometry}
+\usepackage[a4paper, top=1.2cm, bottom=1.2cm, left=1cm, right=1cm, columnsep=0.8cm]{geometry}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
 \usepackage[expansion=false]{microtype}
-
-\usepackage{titlesec}
-\titlespacing*{\section}{0pt}{*1.0}{*0.4}
-\titlespacing*{\subsection}{0pt}{*0.8}{*0.3}
-\titlespacing*{\subsubsection}{0pt}{*0.7}{*0.2}
-
-\usepackage{enumitem}
-\setlist{itemsep=1pt, topsep=3pt}
-
-\setlength{\parskip}{2pt}
-\setlength{\parindent}{0pt}
-
-\usepackage[T1]{fontenc}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{braket}
-\usepackage{amsfonts} % oder amssymb
+\usepackage{amsmath, amssymb, amsfonts, braket}
 \usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage[dvipsnames,table]{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
 
-\linespread{0.95}
+\setlist{itemsep=2pt, topsep=3pt, leftmargin=1.2em, parsep=0pt}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+\linespread{1.05}
+
+% ── Farben ──────────────────────────────────────────────
+\definecolor{c1}{RGB}{25,95,155}     % Vektorräume – blau
+\definecolor{c2}{RGB}{110,45,150}    % Lin. Unabh. – lila
+\definecolor{c3}{RGB}{15,120,70}     % Basis & Dim – grün
+\definecolor{c4}{RGB}{175,80,0}      % Norm – orange
+\definecolor{c5}{RGB}{155,25,55}     % Fourier – rot
+\definecolor{c6}{RGB}{0,110,125}     % Abbildungen – teal
+\definecolor{c7}{RGB}{222,93,131}     % Kern u. Bild – blush
+\definecolor{c8}{RGB}{181,166,66}     % Isomorphismen – brass
+\definecolor{c9}{RGB}{189,51,164}     % Basiswechsel – byzantine
+\definecolor{c10}{RGB}{0,191,255}     % Eigenvektor u. Eigenwerte – capri
+\definecolor{c11}{RGB}{113,188,120}     % Diagonaliseren v. Matrizen – fern
+\definecolor{cn}{RGB}{80,80,80}      % Notes – grau
+\definecolor{detail}{RGB}{100,100,100}
+\definecolor{defbg}{RGB}{232,242,255}
+\definecolor{tipbg}{RGB}{255,247,220}
+\definecolor{recbg}{RGB}{230,247,236}
+\definecolor{detbg}{RGB}{248,248,248}
+
+\newcommand{\seccol}{black}
+\newcommand{\setseccol}[1]{\renewcommand{\seccol}{#1}}
+
+% ── Section-Format ──────────────────────────────────────
+\newcommand{\makesecheader}[1]{%
+	\noindent\colorbox{\seccol}{\makebox[\columnwidth][l]{%
+			\color{white}\bfseries\small\strut\enspace\thesection\enspace\textbar\enspace #1\enspace%
+	}}%
+}
+\titleformat{\section}[block]{\normalfont}{}{0pt}{\makesecheader}
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+\titleformat{\subsection}[block]{\normalfont\bfseries\small}{}{0pt}{\color{\seccol}\rule[-.3ex]{2.5pt}{9pt}\enspace}
+\titlespacing*{\subsection}{0pt}{6pt}{2pt}
+
+\titleformat{\subsubsection}[block]{\normalfont\bfseries\footnotesize\color{detail}}{}{0pt}{}
+\titlespacing*{\subsubsection}{0pt}{4pt}{1pt}
+
+% ── Box-Stile ───────────────────────────────────────────
+\tcbset{
+	base/.style={boxrule=0.4pt, arc=2.5pt, left=5pt, right=5pt, top=4pt, bottom=4pt,
+		fonttitle=\bfseries\small, enhanced},
+	defbox/.style={base, colback=defbg, colframe=c1!60,
+		attach boxed title to top left, boxed title style={colback=c1!60}, coltitle=white},
+	tipbox/.style={base, colback=tipbg, colframe=c4!70, notitle},
+	recbox/.style={base, colback=recbg, colframe=c3!70,
+		coltitle=white},
+	detbox/.style={base, colback=detbg, colframe=gray!30, notitle,
+		fontupper=\small\color{detail}},
+}
+
+% Kleiner Detail-Text
+\newcommand{\detail}[1]{{\small\color{detail}#1}}
+
 \begin{document}
-    \tableofcontents
-    \section{Vektorräume}
-    
-    \section{Lineare Unabhängigkeit}
-    
-    Definition
-    
-    $$\sum_{i=1}^n\lambda_i v_i = 0 \implies \lambda_i = 0 \quad für \quad i=1,...,n$$
-    
-    Vektoren sind linear ubahängig, falls die summe der Vektoren nur dann null ist, wenn die Faktoren 0 sind. Sind aber nicht alle Fakoten 0 so sind die Vekotren linear abhängig.
-    
-    $$\lambda_1 \vec{a}_1 + \lambda_2 \vec{a}_2 + ... + \lambda_k \vec{a}_k = \vec{0}$$
-    
-    Vektoren sind linear unabhängig, falls ein Vektor nicht durch eine linearkombinationder anderen dargestellt werden kann. \\
-    
-    1. Es lässt sich zeigen, dass es in der Ebene maximal zwei lineare unabhänige Vektoren gibt (daher stammt auch die Bezeihnung "2-dimensionaler" Raum für die Ebene), mehr als zwei Vektoren sind immer linear abhängig. Gilt auch für K=3, einfach dass es hier mehr wie 3 Vekoren sind, die zur linearen Abhänigkeit führen. \\
-    
-    2. Die k Vektoren sind linear Abhängig, wenn sie den Nullvketor oder kolineare Vektoren enthalten oder wenn mindestens einer der Vektoren als Linearkombination der übrigen darstellbar ist. \\
-    
-    3. Bei jeder Menge von Vektoren lässt sich auch durch das Lösen eines homogenen LGS bestimmen ob sie linear abhängig ist oder nicht. Falls der Rang (Anzahl Pivot) gleich der Anzahl Spalten ist, sind sie linear unabhängig. Ist der Rang ungleich der Anzahl Spalten oder gibt es unendlich viele lösungen sind sie linear abhängig. \\
-    
-    4. In vielen einfachen fällen "sieht" man es oder kann durch einfaches herumprobieren feststellen ob eine Menge von Vektoren linear abhängig ist oder nicht. Das geht ofet schneller als zu gaussen.
-    
-    \subsection*{1. Linear unabhängig}
-    
-    $\vec{v}_1 = \begin{pmatrix}1\\0\end{pmatrix}$, $\vec{v}_2 = \begin{pmatrix}0\\1\end{pmatrix}$
-    
-    \[
-    \left(\begin{array}{cc|c} 1 & 0 & 0 \\ 0 & 1 & 0 \end{array}\right)
-    \xrightarrow{\text{bereits in Stufenform}}
-    \left(\begin{array}{cc|c} 1 & 0 & 0 \\ 0 & 1 & 0 \end{array}\right)
-    \]
-    
-    Rang $= 2 =$ Anzahl Vektoren $\Rightarrow \lambda_1 = 0,\; \lambda_2 = 0$
-    $\Rightarrow$ linear \textbf{unabhängig}.
-    
-    \subsection*{2. Linear abhängig}
-    
-    $\vec{v}_1 = \begin{pmatrix}1\\2\end{pmatrix}$, $\vec{v}_2 = \begin{pmatrix}2\\4\end{pmatrix}$
-    
-    \[
-    \left(\begin{array}{cc|c} 1 & 2 & 0 \\ 2 & 4 & 0 \end{array}\right)
-    \xrightarrow{Z_2 \,-=\, 2 \cdot Z_1}
-    \left(\begin{array}{cc|c} 1 & 2 & 0 \\ 0 & 0 & 0 \end{array}\right)
-    \]
-    
-    Rang $= 1 <$ Anzahl Vektoren $\Rightarrow \lambda_2 = t,\; \lambda_1 = -2t$
-    $\Rightarrow$ linear \textbf{abhängig}.
-    
-    \subsection{Lineare Hülle}
-    
-    Seien $V$ ein $\mathbb{K}$-Vektorraum und $S \subset V$ eine Teilmenge von $V$.
-    
-    \begin{enumerate}
-    	\item[i)] Seien $v_1, \ldots, v_n \in V,\ n \in \mathbb{N}$ beliebige Vektoren in $V$. 
-    	Die Menge aller Linearkombinationen von $v_1, \ldots, v_n$
-    	\[
-    	\text{span}(v_1, \ldots, v_n) := \left\{ v \in V \;\middle|\; v = \sum_{i=1}^{n} \lambda_i v_i,\ \lambda_i \in \mathbb{K} \right\}
-    	\]
-    	heisst die \textbf{lineare Hülle} von $v_1, \ldots, v_n$.
-    	
-    	\item[ii)] Sei $S \subset V$ eine nicht leere Teilmenge von $V$. 
-    	Dann ist die \textbf{lineare Hülle} von $S$ definiert durch
-    	\[
-    	\text{span}(S) := \left\{ v \in V \;\middle|\; v = \sum_{i=1}^{n} \lambda_i v_i,\ v_i \in S,\ \lambda_i \in \mathbb{K},\ n \in \mathbb{N} \right\}
-    	\]
-    	
-    	Zusätzlich legen wir noch fest:
-    	\[
-    	\text{span}(\emptyset) := \{0\},
-    	\]
-    \end{enumerate}
-    
-    \textbf{eine Lineare hülle muss nich zwingend linear unabhängig sein, nur wenn wir sie als basis betrachten}
-    
-    \subsubsection{Erzeugendensysteme}
-    
-    Seien $V$ ein $\mathbb{K}$-Vektorraum und $S \subset V$ eine Teilmenge von $V$. 
-    $S$ heisst \textbf{Erzeugendensystem} von $V$, falls
-    \[
-    \text{span}(S) = V,
-    \]
-    d.h. $S$ spannt den gesamten Vektorraum $V$ auf.
-    
-    \section{Basis und Dimension}
-    
-    \section{Norm}
-    
-    \subsection{Vektornormen}
-    
-    \subsubsection{euklidische Norm}
-    $$\| \vec{v} \|_2  = \sqrt{v_1^2 + v_2^2 + \cdots + v_n^2}$$
-    
-    $$\left\| \begin{pmatrix} 3 \\ 4 \end{pmatrix} \right\| = \sqrt{3^2 + 4^2} = \sqrt{25} = 5$$
-    
-    \subsubsection{p-Norm}
-    
-    $$\|\vec{v}\|_p = \left( \sum_{i=1}^{n} |v_i|^p \right)^{\frac{1}{p}}$$
-    
-    % 1-Norm (Betragssummennorm)
-    $$\|\vec{v}\|_1 = |v_1| + |v_2| + \cdots + |v_n|$$
-    
-    % 2-Norm (Euklidische Norm)
-    $$\|\vec{v}\|_2 = \sqrt{v_1^2 + v_2^2 + \cdots + v_n^2}$$
-    
-    % p-Norm allgemein
-    $$\|\vec{v}\|_p = \left( |v_1|^p + |v_2|^p + \cdots + |v_n|^p \right)^{\frac{1}{p}}$$
-    
-    \subsubsection{Maximumsnorem}
-    
-    % Unendlich-Norm (Maximumsnorm)
-    $$\|\vec{v}\|_\infty = \max_{i} |v_i|$$
-    
-    $$\left\| \begin{pmatrix} 3 \\ -7 \\ 2 \end{pmatrix} \right\|_\infty$$
-    $$= \max(|3|, |-7|, |2|) $$
-    $$= \max(3, 7, 2) $$
-    $$= 7$$
-    
-    \subsection{Matrixnorm}
-    
-    \textbf{Beispielmatrix:}
-    $$A = \begin{pmatrix} 1 & -2 \\ 3 & 4 \end{pmatrix}$$
-    
-    \subsubsection{Frobenius-Norm}
-    $$\|A\|_F := \sqrt{\sum_{i=1}^{m} \sum_{j=1}^{n} |a_{ij}|^2}$$
-    Beispiel:
-    $$\|A\|_F = \sqrt{|1|^2 + |-2|^2 + |3|^2 + |4|^2} 
-    = \sqrt{1 + 4 + 9 + 16} 
-    = \sqrt{30}$$
-    
-    \subsubsection{Zeilensummennorm}
-    $$\|A\|_\infty := \max_{1 \leq i \leq m} \sum_{j=1}^{n} |a_{ij}|$$
-    Beispiel:
-    $$Z_1 = |1| + |-2| = 3$$
-    $$Z_2 = |3| + |4|  = 7$$
-    $$\|A\|_\infty = \max(3, 7) = 7$$
-    
-    \subsubsection{Spaltensummennorm}
-    $$\|A\|_1 := \max_{1 \leq j \leq n} \sum_{i=1}^{m} |a_{ij}|$$
-    Beipsiel:
-    $$S_1 = |1| + |3|  = 4$$
-    $$S_2 = |-2| + |4| = 6$$
-    $$\|A\|_1 = \max(4, 6) = 6$$
-    
-    \subsection{Funktionsnorm}
-    
-    Die $L^p$
-    Lp-Norm verallgemeinert die Vektornormen auf
-    Funktionen – statt Summe über Einträge steht ein Integral.
-    
-    $$L^p(\mathbb{D}) := \left\{ f : \mathbb{D} \to \mathbb{K} \;\middle|\; \int_{\mathbb{D}} |f(x)|^p \, dx < \infty \right\}$$
-    
-    $$\|f\|_{L^p} := \left( \int_{\mathbb{D}} |f(x)|^p \, dx \right)^{1/p}$$
-    
-    Beispiel:
-    
-    % Sei f(x) = x, D = [0,1], p = 2
-    
-    $$\|f\|_{L^2} = \left( \int_0^1 |x|^2 \, dx \right)^{1/2}$$
-    $$= \left( \int_0^1 x^2 \, dx \right)^{1/2}$$
-    $$= \left[ \frac{x^3}{3} \right]_0^1 )^{1/2}$$
-    $$= \left( \frac{1}{3} \right)^{1/2}$$
-    $$= \frac{1}{\sqrt{3}}$$
-    
-    \section{Skalarprodukt}
-    
-    \subsection{Standardskalarprodukt in $R^n$}
-    $$\langle x, y \rangle := \sum_{i=1}^{n} x_i y_i, \quad x, y \in \mathbb{R}^n$$
-    Beispiel:
-    % R^n: x = (1,2), y = (3,4)
-    $$\langle x, y \rangle = 1 \cdot 3 + 2 \cdot 4 = 11$$
-    
-    \subsubsection{Standardskalarprodukt in $C^n$}
-    $$\langle w, z \rangle := \sum_{i=1}^{n} \overline{w_i} z_i, \quad w, z \in \mathbb{C}^n$$
-    
-    \subsection{Skalarprodukt für reelle Matrizen}
-    $$\langle A, B \rangle := \text{tr}(A^T B), \quad A, B \in \mathbb{R}^{m \times n}$$
-    
-    Beispiel:
-    
-    % Matrizen: A = B = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}
-    $$A^T B = \begin{pmatrix} 1 & 3 \\ 2 & 4 \end{pmatrix} \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}
-    = \begin{pmatrix} 10 & 14 \\ 14 & 20 \end{pmatrix}
-    \langle A, B \rangle = \text{tr}(A^T B) = 10 + 20 = 30$$
-    
-    \subsection{Skalarprodukt für komplexe Matrizen}
-    $$\langle A, B \rangle := \text{tr}(A^* B), \quad A, B \in \mathbb{C}^{m \times n}$$
-    
-    \subsubsection{Skalarprodukt auf $L^2$}
-    $$\langle f, g \rangle_{L^2} := \int_{\mathbb{D}} \overline{f(x)} g(x) \, dx$$
-    
-    Beispiel:
-    
-    % L^2: f(x) = x, g(x) = x^2, D = [0,1]
-    $$\langle f, g \rangle_{L^2} = \int_0^1 x \cdot x^2 \, dx = \int_0^1 x^3 \, dx = \frac{1}{4}$$
-    
-    \subsection{Induzierte Norm}
-    
-    % Erklärsatz
-    \textbf{Induzierte Norm:} \text{ Jedes Skalarprodukt erzeugt automatisch eine Norm via } 
-    $\|v\| := \sqrt{\langle v, v \rangle} $ \\
-    \text{ – man setzt einfach beide Argumente gleich und zieht die Wurzel.}
-    
-    \text{Nicht jede Norm kommt von einem Skalarprodukt, aber jedes Skalarprodukt liefert immer eine Norm.}
-    
-    % Allgemein: induzierte Norm
-    $$\|v\| := \sqrt{\langle v, v \rangle}$$
-    
-    % R^n
-    $$\|x\| = \sqrt{\langle x, x \rangle} = \sqrt{\sum_{i=1}^{n} x_i^2}$$
-    
-    % C^n
-    $$\|w\| = \sqrt{\langle w, w \rangle} = \sqrt{\sum_{i=1}^{n} \overline{w_i} w_i} = \sqrt{\sum_{i=1}^{n} |w_i|^2}$$
-    
-    % Matrizen R^{m x n}  (= Frobenius-Norm!)
-    $$\|A\|_F = \sqrt{\langle A, A \rangle} = \sqrt{\text{tr}(A^T A)}$$
-    
-    % Matrizen C^{m x n}
-    $$\|A\|_F = \sqrt{\langle A, A \rangle} = \sqrt{\text{tr}(A^* A)}$$
-    
-    % L^2
-    $$\|f\|_{L^2} = \sqrt{\langle f, f \rangle} = \sqrt{\int_{\mathbb{D}} |f(x)|^2 \, dx}$$
-    
-    Beispiele: 
-    
-    % R^n: x = (1,2)
-    $$\|x\| = \sqrt{1^2 + 2^2} = \sqrt{5}$$
-    
-    % Matrizen: A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}
-    $$\text{tr}(A^T A) = \text{tr}\begin{pmatrix} 10 & 14 \\ 14 & 20 \end{pmatrix} = 30
-    \|A\|_F = \sqrt{30}$$
-    
-    % L^2: f(x) = x, D = [0,1]
-    $$\|f\|_{L^2} = \sqrt{\int_0^1 x^2 \, dx} = \sqrt{\frac{1}{3}} = \frac{1}{\sqrt{3}}$$
-    
+	\twocolumn[{%
+		\centering\vspace{-2pt}
+		{\large\bfseries Zusammenfassung — Lineare Algebra 2}
+		\enspace{\small\color{gray}Woche 1–7}
+		\vspace{3pt}\hrule\vspace{5pt}
+	}]
+	
+	%═══════════════════════════════════════════════════
+	\setseccol{c1}
+	\section{Vektorräume \& Unterräume}
+	
+	\begin{tcolorbox}[defbox, title={Def. 5.1.1 — Vektorraum}]
+		$\mathbb{K}$-Vektorraum: Menge $V$ mit $+$ und $\cdot$, 8 Axiome:
+		\begin{itemize}
+			\item \textbf{Addition (i–iv):} Assoziativität, Nullvektor, Negatives, Kommutativität
+			\item \textbf{Skalarmult. (v–vi):} $(\lambda\mu)v=\lambda(\mu v)$,\ $1\cdot v=v$
+			\item \textbf{Distributiv (vii–viii):} $\lambda(v+w)=\lambda v+\lambda w$
+		\end{itemize}
+	\end{tcolorbox}
+	
+	\detail{Beispiele: $\mathbb{R}^n$, $\mathbb{C}^n$, $\mathbb{K}^{m\times n}$, $P_n$ (Polynome), $C([a,b])$ (stetige Fkt.)}
+	
+	\subsection{Unterräume}
+	
+	\begin{tcolorbox}[defbox, title={Def. 5.2.1 — Unterraum}]
+		$U\subseteq V$ ist Unterraum $\iff$
+		\begin{itemize}[leftmargin=1em]
+			\item[i)] $u,v\in U \Rightarrow u+v\in U$
+			\item[ii)] $\lambda\in\mathbb{K},\,u\in U \Rightarrow \lambda u\in U$
+		\end{itemize}
+	\end{tcolorbox}
+	
+	\begin{tcolorbox}[tipbox]
+		\textbf{GO-Kriterium:} $0\notin U \Rightarrow$ sofort kein Unterraum!
+	\end{tcolorbox}
+	
+	\detail{%
+		\textbf{Unterräume:} Geraden/Ebenen durch Ursprung, $\ker(A)$, symmetr.\ Matrizen.\\
+		\textbf{Kein Unterraum:} $Ax=c$ ($c\neq0$), $\det(A)=1$, invertierbare Matrizen.%
+	}
+	
+	%═══════════════════════════════════════════════════
+	\setseccol{c2}
+	\section{Lineare Unabhängigkeit}
+	
+	\begin{tcolorbox}[defbox, title={Definition}]
+		$v_1,\ldots,v_n$ \textbf{lin.\ unabhängig} $\iff$
+		$$\sum_{i=1}^n\lambda_i v_i = 0 \implies \lambda_i=0\ \forall i$$
+		Sonst \textbf{linear abhängig}.
+	\end{tcolorbox}
+	
+	\begin{tcolorbox}[recbox, title={Rezept via Gauss}]
+		Vektoren als Spalten $\to$ Gauss $\to$ Rang:\\
+		Rang $=$ Anz.\ Vektoren $\Rightarrow$ \textbf{unabhängig}\\
+		Rang $<$ Anz.\ Vektoren $\Rightarrow$ \textbf{abhängig}
+	\end{tcolorbox}
+	
+	\detail{Abhängig wenn: Nullvektor enthalten, kollineare Vektoren, oder ein Vektor ist Linearkombination der anderen. In $\mathbb{R}^2$ max.\ 2, in $\mathbb{R}^3$ max.\ 3 lin.\ unabh.\ Vektoren.}
+	
+	\begin{tcolorbox}[detbox]
+		\textbf{Bsp.\ unabhängig:}\ $v_1=\!\binom{1}{0}$, $v_2=\!\binom{0}{1}$: Rang $=2=$ Anz.\ $\Rightarrow$ unabh.\\
+		\textbf{Bsp.\ abhängig:}\ $v_1=\!\binom{1}{2}$, $v_2=\!\binom{2}{4}$: Rang $=1<2$ $\Rightarrow$ abh.
+	\end{tcolorbox}
+	
+	\begin{tcolorbox}[detbox]
+		\textbf{Lin. Unabhängigkeit von Matrizen:} Jede Matrix $A_i \in \mathbb{R}^{m\times n}$ als Spaltenvektor schreiben (Spalten untereinander, $mn$ Einträge). Dann wie Vektoren behandeln: als Spalten in eine Matrix $\to$ Gauss $\to$ Rang bestimmen.\\
+		Oder direkt: $\lambda_1 A_1 + \cdots + \lambda_k A_k = 0$ komponentenweise lösen (jeder Eintrag gibt eine Gleichung).
+	\end{tcolorbox}
+	
+	\subsection{Lineare Hülle \& Erzeugendensystem}
+	
+	$$\operatorname{span}(v_1,\ldots,v_n):=\!\left\{v\in V\;\middle|\;v=\sum_i\lambda_i v_i\right\}$$
+	
+	\detail{$S$ heisst \textbf{Erzeugendensystem} von $V$ falls $\operatorname{span}(S)=V$. Eine lin.\ Hülle muss nicht lin.\ unabhängig sein — nur als Basis.}
+	
+	%═══════════════════════════════════════════════════
+	\setseccol{c3}
+	\section{Basis und Dimension}
+	
+	\begin{tcolorbox}[defbox, title={Def. 5.4.1 — Basis}]
+		$B\subset V$ ist Basis $\iff$ lin.\ unabhängig \textbf{und} $\operatorname{span}(B)=V$.\\
+		Kleinstmögliches Erzeugendensystem.
+	\end{tcolorbox}
+	
+	\begin{tcolorbox}[defbox, title={Def. 5.4.7 — Dimension}]
+		$\dim_\mathbb{K}(V)$ = Anzahl Vektoren in einer Basis (eindeutig).\\
+		$\dim(\mathbb{R}^n)=n$,\quad $\dim(P_2)=3$,\quad $\dim(\{0\})=0$
+	\end{tcolorbox}
+	
+	\begin{tcolorbox}[tipbox]
+		\textbf{Koordinatenvektor (Satz 5.4.9):}
+		$v=\sum x_i b_i \;\leftrightarrow\; x=(x_1,\ldots,x_n)^\top$ \textbf{eindeutig}.\\
+		Koordinaten hängen von der Basiswahl ab!
+	\end{tcolorbox}
+	
+	\detail{Standardbasis $\mathbb{R}^n$: $e_1,\ldots,e_n$ (Einheitsvektoren). Bsp.\ $P_2$: $\{1,x,x^2\}$ oder $\{3,x^2,-2x\}$ — viele Basen möglich.\\
+		\textbf{Basisergänzungssatz:} Lin.\ unabh.\ Vektoren $\to$ zur Basis ergänzen; Erzeugendensystem $\to$ Basis herausstreichen.}
+	
+	%═══════════════════════════════════════════════════
+	\setseccol{c4}
+	\section{Norm \& Skalarprodukt}
+	
+	\subsection{Vektornormen}
+	
+	\begin{tcolorbox}[defbox, title={Normen}]
+		$\|v\|_p=\bigl(\sum|v_i|^p\bigr)^{1/p}$\quad (p-Norm)\\
+		$\|v\|_2=\sqrt{\sum v_i^2}$\quad (Euklidisch)\quad $\|v\|_\infty=\max_i|v_i|$
+	\end{tcolorbox}
+	
+	\detail{Bsp.: $\|\binom{3}{4}\|_2=5$;\quad $\|(3,-7,2)^\top\|_\infty=7$}
+	
+	\subsection{Matrixnormen}
+	
+	\begin{tcolorbox}[defbox, title={Matrixnormen}]
+		Frobenius: $\|A\|_F=\sqrt{\sum_{ij}|a_{ij}|^2}$\\
+		Zeilensumme: $\|A\|_\infty=\max_i\sum_j|a_{ij}|$\\
+		Spaltensumme: $\|A\|_1=\max_j\sum_i|a_{ij}|$
+	\end{tcolorbox}
+	
+	\detail{Für $A=\bigl(\begin{smallmatrix}1&-2\\3&4\end{smallmatrix}\bigr)$: $\|A\|_F=\sqrt{30}$,\ $\|A\|_\infty=7$,\ $\|A\|_1=6$}
+	
+	\subsection{Funktionsnorm}
+	\detail{$L^p$-Norm: $\|f\|_{L^p}=\bigl(\int_\mathbb{D}|f|^p dx\bigr)^{1/p}$. \quad Bsp.: $\|x\|_{L^2[0,1]}=\frac{1}{\sqrt{3}}$}
+	
+	\subsection{Skalarprodukt}
+	
+	\begin{tcolorbox}[defbox, title={Skalarprodukte}]
+		$\mathbb{R}^n$: $\langle x,y\rangle=\sum x_iy_i$\quad
+		$\mathbb{C}^n$: $\langle w,z\rangle=\sum\overline{w_i}z_i$\\
+		Matrizen: $\langle A,B\rangle=\operatorname{tr}(A^TB)$\\
+		$L^2$: $\langle f,g\rangle=\int_\mathbb{D}\overline{f(x)}g(x)\,dx$
+	\end{tcolorbox}
+	
+	\begin{tcolorbox}[tipbox]
+		\textbf{Induzierte Norm:} $\|v\|=\sqrt{\langle v,v\rangle}$.\quad Jedes Skalarprodukt $\Rightarrow$ Norm (nicht umgekehrt).
+	\end{tcolorbox}
+	
+	\detail{Bsp.: $\langle(1,2),(3,4)\rangle=11$;\quad $\langle f,g\rangle_{L^2}$ für $f=x,g=x^2$ auf $[0,1]$: $\int_0^1 x^3dx=\frac{1}{4}$}
+	
+	\subsection{Orthonormalbasen (ONB)}
+	
+	\begin{tcolorbox}[defbox, title={Def. 5.6.8 — ONB}]
+		$\{e_1,\ldots,e_n\}$ ist ONB $\iff \langle e_i,e_j\rangle=\delta_{ij}$\\
+		(paarweise orthogonal + normiert)
+	\end{tcolorbox}
+	
+	\begin{tcolorbox}[tipbox]
+		\textbf{Vorteil:} Koordinaten ohne LGS: $x_i=\langle e_i,v\rangle$\\
+		$v=\sum_{i=1}^n\langle e_i,v\rangle\,e_i$
+	\end{tcolorbox}
+	
+	\subsection{Gram-Schmidt}
+	
+	\begin{tcolorbox}[recbox, title={Algorithmus}]
+		\textbf{1.\ Orthogonalisieren:}
+		$$v_1=w_1,\quad v_i=w_i-\sum_{k=1}^{i-1}\frac{\langle v_k,w_i\rangle}{\langle v_k,v_k\rangle}v_k$$
+		\textbf{2.\ Normieren:} $e_i=v_i/\|v_i\|$
+	\end{tcolorbox}
+	
+	%═══════════════════════════════════════════════════
+	\setseccol{c5}
+	\section{Fourier-Reihen}
+	
+	\detail{Idee: Fourier-Koeffizienten = Koordinaten in ONB des $L^2$-Raums. $L^2([0,T])$ mit $\langle f,g\rangle=\frac{1}{T}\int_0^T\overline{f}g\,dt$.}
+	
+	\begin{tcolorbox}[tipbox]
+		\textbf{$\omega$ aus Signal ablesen:} $\omega=\operatorname{ggT}$ aller Frequenzen.
+		$\omega=\pi\cdot\frac{\operatorname{ggT(Zähler)}}{\operatorname{kgV(Nenner)}}$\\
+		\detail{Bsp.: $\frac{\pi}{3},\frac{5\pi}{6},\frac{8\pi}{3}\Rightarrow\omega=\frac{\pi}{6}$, also $n=2,5,16$.}
+	\end{tcolorbox}
+	
+	\subsection{Reelle Schreibweise}
+	
+	\begin{tcolorbox}[defbox, title={Formel}]
+		$$f(t)=\frac{a_0}{2}+\sum_{n=1}^\infty\bigl(a_n\cos(n\omega t)+b_n\sin(n\omega t)\bigr)$$
+	\end{tcolorbox}
+	
+	\textbf{Koeffizienten:}
+	$$a_0=\frac{2}{T}\int_0^T\!f\,dt, \quad a_n=\frac{2}{T}\int_0^T\!f\cos(n\omega t)\,dt$$
+	$$b_n=\frac{2}{T}\int_0^T\!f\sin(n\omega t)\,dt$$
+	
+	\begin{tcolorbox}[tipbox]
+		$f$ \textbf{gerade} $\Rightarrow b_n=0$.\quad $f$ \textbf{ungerade} $\Rightarrow a_n=0$.\\
+		$a_0/2=0$: kein DC-Anteil (Mittelwert null).
+	\end{tcolorbox}
+	
+	\subsection{Komplexe Schreibweise}
+	
+	\begin{tcolorbox}[defbox, title={Formel}]
+		$f(t)=\sum_{k=-\infty}^{\infty}c_k e^{ik\omega t},\quad c_k=\frac{1}{T}\int_0^T\!f(t)e^{-ik\omega t}dt$
+	\end{tcolorbox}
+	
+	\begin{tcolorbox}[tipbox]
+		\textbf{DC-Anteil (komplex):} $c_0 = \frac{1}{T}\int_0^T f(t)\,dt = \frac{a_0}{2}$
+	\end{tcolorbox}
+	
+	\detail{Basisfunktionen $e^{ik\omega t}$ bilden vollst.\ ONS. Approximation: $f_N(t)=\sum_{k=-N}^N c_k e^{ik\omega t}$.}
+	
+	\subsection{Amplituden-Phasen-Form}
+	
+	\begin{tcolorbox}[defbox, title={Formel}]
+		$f(t)=\frac{a_0}{2}+\sum_{n=1}^\infty A_n\cos(n\omega t+\varphi_n)$\\
+		$A_n=\sqrt{a_n^2+b_n^2}$,\quad $\varphi_n=\arg(c_n)$,\quad $|c_n|=\frac{A_n}{2}$
+	\end{tcolorbox}
+	
+	\subsection{Umrechnung zwischen Schreibweisen}
+	
+	\begin{tcolorbox}[recbox, title={Umrechnungsformeln}]
+		\textbf{Ampl.-Phase $\to$ Reell:}\ $a_k=A_k\cos\varphi_k$,\ $b_k=-A_k\sin\varphi_k$\\
+		\textbf{Reell $\to$ Komplex:}\ $c_k=\frac{a_k}{2}-\frac{b_k}{2}i$,\ $c_{-k}=\overline{c_k}$\\
+		\textbf{Komplex $\to$ Reell:}\ $a_k=2\operatorname{Re}(c_k)$,\ $b_k=-2\operatorname{Im}(c_k)$
+	\end{tcolorbox}
+	
+	\detail{Alle drei Schreibweisen = dasselbe Signal. $c_{-k}$ nur in komplexer Schreibweise, immer $=\overline{c_k}$.}
+	
+	\subsection{Konvergenz}
+	
+	\begin{itemize}
+		\item \textbf{$L^2$:} Immer — Fläche zw.\ $f_N$ und $f\to 0$.
+		\item \textbf{Dirichlet:} Endlich viele Unstetigkeitsstellen $\Rightarrow$ punktweise.
+		\item \textbf{Gleichmässig:} $f$ stetig + stückw.\ stetig diffbar.
+		\item \textbf{Gibbs:} Überschwingungen an Sprüngen bleiben (auch grosse $N$).
+	\end{itemize}
+	
+	%═══════════════════════════════════════════════════
+	\setseccol{c6}
+	\section{Lineare Abbildungen}
+	
+	\begin{tcolorbox}[tipbox]
+		\textbf{Spalten von $A$ = Bilder der Basisvektoren!}\\
+		Jede $m\times n$-Matrix $\leftrightarrow$ lineare Abbildung $\mathbb{K}^n\to\mathbb{K}^m$.
+	\end{tcolorbox}
+	
+	\begin{tcolorbox}[defbox, title={Def. 6.1.1 — Lineare Abbildung}]
+		$f:V\to W$ linear $\iff$
+		\begin{itemize}[leftmargin=1em]
+			\item[i)] $f(v_1+v_2)=f(v_1)+f(v_2)$
+			\item[ii)] $f(\lambda v)=\lambda f(v)$
+		\end{itemize}
+		\textbf{Folgerung:} $f(0)=0$ — wenn $f(0)\neq0$: nicht linear!
+	\end{tcolorbox}
+	
+	\detail{Beispiele: Matrizen, Ableitung $\frac{d}{dx}:P_2\to P_1$, Projektion, Spiegelung, Drehung.\\
+		Nicht linear: $f(x)=Ax+c$ mit $c\neq0$.}
+	
+	\subsubsection{Spezielle Matrizen — Erkennung}
+	
+	\begin{tcolorbox}[defbox, title={Übersicht}]
+		\begin{tabular}{@{}lccc@{}}
+			\toprule
+			& $\det$ & $A^TA{=}I$? & $A^2{=}A$? \\
+			\midrule
+			Drehung & $+1$ & ja & nein \\
+			Spiegelung & $-1$ & ja & nein \\
+			Projektion & $0$ & nein & ja \\
+			Streckung $\alpha$ & $\alpha^2$ & nein & nein \\
+			\bottomrule
+		\end{tabular}
+	\end{tcolorbox}
+	
+	\textbf{Drehung} um $\varphi$ im $\mathbb{R}^2$:
+	$$O=\begin{pmatrix}\cos\varphi&-\sin\varphi\\\sin\varphi&\cos\varphi\end{pmatrix}\in SO(2),\quad O^TO=I,\quad\det O=1$$
+	
+	\textbf{Spiegelung} an $x_2$-Achse:
+	$$S=\begin{pmatrix}-1&0\\0&1\end{pmatrix},\quad\det S=-1$$
+	
+	\textbf{Projektion} auf $x_1$-$x_2$-Ebene:
+	$$P=\begin{pmatrix}1&0&0\\0&1&0\end{pmatrix},\quad\det P=0,\quad P^2=P$$
+	
+	\textbf{Streckung} um Faktor $\alpha$:
+	$$S=\begin{pmatrix}\alpha&0\\0&\alpha\end{pmatrix},\quad\det S=\alpha^2$$
+	
+	\detail{Trick: $\cos(x+\tfrac{\pi}{2})=-\sin x$,\quad $\cos(x-\tfrac{\pi}{2})=+\sin x$}
+	
+	\subsection{Matrix einer linearen Abbildung}
+	
+	\begin{tcolorbox}[recbox, title={Rezept: Matrix aufstellen — Normalfall}]
+		\begin{enumerate}[leftmargin=1.5em, itemsep=2pt]
+			\item Basen $B_V=\{v_1,\ldots,v_n\}$, $B_W=\{w_1,\ldots,w_m\}$ wählen
+			\item Bilder $f(v_j)$ der Basisvektoren \textbf{einzeln berechnen}
+			\item $f(v_j)$ als Linearkombination in Basis $B_W$ ausdrücken
+			\item Koeffizienten $\to$ $j$-te \textbf{Spalte} von $A$
+		\end{enumerate}
+	\end{tcolorbox}
+	
+	\begin{tcolorbox}[tipbox]
+		\textbf{Sonderfall: Bilder der Basisvektoren nicht direkt bekannt!}\\
+		Wenn man $f(e_1), f(e_2)$ nicht kennt, aber $f$ auf anderen Vektoren weiss:\\[3pt]
+		\textbf{1.} Diese Vektoren als Linearkombination der Basis schreiben:\\
+		\quad $\binom{1}{2} = e_1 + 2e_2 \;\Rightarrow\; f\binom{1}{2} = f(e_1) + 2f(e_2) = \binom{7}{0}$\\[3pt]
+		\textbf{2.} Gleiches für zweiten bekannten Vektor:\\
+		\quad $\binom{-2}{2} = -2e_1 + 2e_2 \;\Rightarrow\; -2f(e_1) + 2f(e_2) = \binom{4}{-6}$\\[3pt]
+		\textbf{3.} LGS lösen (Gauss oder Addition/Subtraktion der Gleichungen) um $f(e_1)$ und $f(e_2)$ zu finden.\\[3pt]
+		\textbf{4.} Bilder als Spalten in die Matrix schreiben.
+	\end{tcolorbox}
+	
+	\detail{Bsp.: $f(e_1)=\binom{1}{2}$, $f(e_2)=\binom{3}{-1}$ $\Rightarrow$ $A=\bigl(\begin{smallmatrix}1&3\\2&-1\end{smallmatrix}\bigr)$.\\
+		\textbf{Merke:} Die Matrix hängt von der Basiswahl ab. Koordinatenformel: $y=Ax$.}
+	
+	\begin{center}
+		\begin{tikzcd}[column sep=1.8em, row sep=1.2em]
+			V \arrow[r, "f"] \arrow[d, "B_V"'] & W \arrow[d, "B_W"] \\
+			\mathbb{K}^n \arrow[r, "A"'] & \mathbb{K}^m
+		\end{tikzcd}
+	\end{center}
+	
+	\detail{Bsp.\ $\frac{d}{dx}:P_2\to P_1$, Standardbasen: $(1)'=0$, $(x)'=1$, $(x^2)'=2x$ $\Rightarrow$ $A=\bigl(\begin{smallmatrix}0&1&0\\0&0&2\end{smallmatrix}\bigr)$.\\
+		\textbf{Koordinatenformel:} $y=Ax$.\quad \textbf{Eindeutigkeit:} Zu jeder Matrix $A$ genau eine lin.\ Abbildung (bzgl.\ Basen) und umgekehrt. Matrix hängt von Basiswahl ab!}
+	
+	\subsection{Verkettung \& Matrixprodukt}
+	
+	\begin{tcolorbox}[defbox, title={Satz 6.3.2}]
+		Matrix von $(g\circ f)$ = $B\cdot A$\\
+		(erst $f$ mit Matrix $A$, dann $g$ mit Matrix $B$)
+	\end{tcolorbox}
+	
+	\begin{tcolorbox}[tipbox]
+		$AB\neq BA$ im Allgemeinen — \textbf{nicht kommutativ}!\\
+		Assoziativität gilt: $(C\circ B)\circ A=C\circ(B\circ A)$.
+	\end{tcolorbox}
+	
+	\setseccol{c7}
+	\section{Kern und Bild einer Lineare Abbildung}
+	
+	\begin{tcolorbox}[defbox, title={Def. 7.1.1 — Vektorraum}]
+		$\mathbb{K}$-Vektorräume: $V$ und $W$ und $f : V \to W$:
+		\begin{itemize}
+			\item $\ker(f) := \{v \in V | f(v)=0\}$
+			\item $\operatorname{im}(f) := \{w \in W | w = f(v) \text{ für ein } v \in V\}$
+		\end{itemize}
+	\end{tcolorbox}
+	
+	\detail{%
+		\textbf{Kern:} Menge der Vektoren, die von einer linearen
+		Abbildung auf den Nullvektor abgebildet werden.\\
+		\textbf{Bild:} Menge der Vektoren,
+		auf die die Vektoren durch die lineare Abbildung abgebildet werden.\\
+	}
+	
+	\begin{tcolorbox}[defbox, title={Def. 7.1.2 — Vektorraum}]
+		\begin{itemize}
+			\item $\ker(f)$ ist ein Unterraum von $V$
+			\item $\operatorname{im}(f)$ ist ein Unterraum von $W$
+		\end{itemize}
+	\end{tcolorbox}
+	
+	\begin{tcolorbox}[recbox, title={Rezept: Berechnung von ker() und im():}]
+		$\mathbb{K}$-Vektorräume: $V$ und $W$ und $f : V \to W$.\\
+		Matrix $A$ von $f$ bezüglich gewählter Basen $B_V = \{v_1 , . . . , v_n\}$ und $BW = \{w_1 , . . . , w_m\}$ gegeben.\\
+		\\
+		\begin{tikzcd}[column sep=1.8em, row sep=1.2em]
+			V \arrow[r, "f"] \arrow[d, "B_V"'] & W \arrow[d, "B_W"] \\
+			\mathbb{K}^n \arrow[r, "A"'] & \mathbb{K}^m
+		\end{tikzcd}
+		\\
+		
+		\textbf{1.\ Kern:}
+		\begin{enumerate}[leftmargin=1.5em, itemsep=2pt]
+			\item \textbf{Löse das homogene lineare Gleichungssystem Ax = 0 (Gauss)}
+			\item Nullvektor \textbf{immer} im Kern.
+			\item Lösungsmenge von $Ax =0$ immer ein $(n - r)$-
+			dimensionaler Unterraum von $K^n$
+			\item r = rang(A) die Anzahl Pivotelemente im Endschema von $Ax = 0$
+			\item maximaler Rang $\to r = n$: Kern trivial und enthält nur den Nullvektor.
+		\end{enumerate}
+		\textbf{2.\ Bild:}
+		\begin{enumerate}[leftmargin=1.5em, itemsep=2pt]
+			\item Spalten von $A$ spannen das Bild von $A$ auf.
+			\item linear \textbf{abhängigen} Spalten wegstreichen.
+			\item Spalten die übrigbleiben, bilden eine Basis von $\operatorname{im}(f)$.
+			\item Gauss-Algorithmus: Spalten mit Pivot $\to$ Basis des Bildes
+			von $f$.
+			\item $\dim_{\mathbb{K}} (\operatorname{im}(f)) = \operatorname{rang}(A)$
+		\end{enumerate}
+	\end{tcolorbox}
+	
+	\begin{tcolorbox}[defbox, title={Def. 7.1.3 — Rangsatz}]
+		$f : V \to W$ eine lineare Abbildung, wobei $dim_{\mathbb{K}} (V ) = n < \infty$. Dann gilt:
+		$$\dim_{\mathbb{K}} (\ker(f )) + \dim_{\mathbb{K}} (\operatorname{im}(f)) = \dim_{\mathbb{K}} (V ).$$
+	\end{tcolorbox}
+	
+	\setseccol{c8}
+	\section{Isomorphismen (Inversion)}
+	
+	\setseccol{c9}
+	\section{Basiswechsel}
+	
+	\setseccol{c10}
+	\section{Eigenvektor und Eigenwerte}
+	
+	\setseccol{c11}
+	\section{Diagonalisieren von Matrizen}
+	
+	%═══════════════════════════════════════════════════
+	\setseccol{cn}
+	\section{Notes}
+	
+	\detail{%
+		\textbf{Senkrechter Vektor:} $(a,b)^\perp=(-b,a)$ — Werte tauschen, ein Minus.\\
+		\textbf{Determinante \& Fläche:} $|\det(A)|$ = Fläche des Parallelogramms der Spaltenvektoren.\\
+	}
+	
+	\detail{%
+		\textbf{Matrix:} m = Zeilebn ; n = Spalten ; $m \times n$
+	}
+	
+	\detail{%
+		\textbf{Rezept Abbildungsmatrix:} (1) Basisvektoren von $B_V$ abbilden, (2) Resultate in Basis $B_W$ ausdrücken.\\
+		Jede $m\times n$-Matrix erzeugt lineare Abbildung $\mathbb{R}^n\to\mathbb{R}^m$.%
+	}
+	
+	
+	
 \end{document}

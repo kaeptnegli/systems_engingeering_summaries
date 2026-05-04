@@ -1,0 +1,243 @@
+\documentclass[../../zusammenfassung_AN.tex]{subfiles}
+\begin{document}
+	
+	\begin{tcolorbox}[dglbox, title={Grundbegriffe}]
+		Eine \textbf{gewöhnliche DGL} ist eine Gleichung für eine unbekannte Funktion $y(x)$,
+		in der nebst $x$ und $y(x)$ auch Ableitungen $y'(x), \dots, y^{(n)}(x)$ vorkommen.
+		Die höchste Ableitungsordnung heisst \textbf{Ordnung der DGL}.
+		\begin{itemize}[noitemsep, topsep=2pt]
+			\item \textbf{explizit:} nach der höchsten Ableitung aufgelöst, z.\,B.\
+			$y'' = \sin(x)\cdot y + \cos(x)\cdot y^2$
+			\item \textbf{implizit:} nicht aufgelöst, z.\,B.\
+			$\bigl(y''\bigr)^2 + \bigl(y'\bigr)^2 = -e^x$
+			\item Die Lösungsmenge einer DGL $n$-ter Ordnung enthält $n$ freie Parameter.
+			\item \textbf{Anfangswertproblem (AWP):} Bedingungen an einem Punkt, z.\,B.\ $y(0)=2,\;y'(0)=1$
+			\item \textbf{Randwertproblem (RWP):} Bedingungen an zwei Punkten, z.\,B.\ $y(0)=0,\;y(\pi)=2$
+		\end{itemize}
+	\end{tcolorbox}
+	
+	\vspace{0.8em}
+	
+	% ============================
+	\subsubsection*{\color{mainblue}1.\quad Elementare DGL}
+	% ============================
+	
+	\paragraph*{1a. Elementare DGL 1.\ Ordnung \quad $y'(x)=a(x)$}\mbox{}\\
+	
+	\begin{tcolorbox}[formelbox]
+		\textbf{Lösungsweg:} Beidseitiges Aufleiten (integrieren):
+		\[
+		y(x) = A(x) + C, \qquad C \in \mathbb{R}
+		\]
+		wobei $A(x)$ eine Stammfunktion von $a(x)$ ist.\\
+		Falls keine geschlossene Stammfunktion existiert $\Rightarrow$ \textbf{Potenzreihenlösung}.
+	\end{tcolorbox}
+	
+	\textbf{Beispiel:} $y'(x)=\sin(x) \;\Rightarrow\; y(x) = -\cos(x)+C$
+	
+	\paragraph*{1b. Elementare DGL $n$-ter Ordnung \quad $y^{(n)}(x)=a(x)$}\mbox{}\\
+	
+	\begin{tcolorbox}[formelbox]
+		\textbf{Lösungsweg:} $n$-maliges Aufleiten ergibt:
+		\[
+		y(x) = A_n(x) + C_0 + C_1 x + C_2 x^2 + \cdots + C_{n-1}x^{n-1}
+		\]
+		mit $A_n^{(n)}(x)=a(x)$. Die Lösungsmenge ist eine $n$-parametrige Funktionenfamilie.
+	\end{tcolorbox}
+	
+	\textbf{Beispiel:} $y^{(n)}(x)=0 \;\Rightarrow\; y(x) = C_0 + C_1 x + \cdots + C_{n-1}x^{n-1}$
+	
+	\vspace{0.8em}
+	
+	% ============================
+	\subsubsection*{\color{mainblue}2.\quad DGL des natürlichen Wachstums}
+	% ============================
+	
+	\[
+	y'(x) = a \cdot y(x), \qquad a \in \mathbb{R},\; a \neq 0
+	\]
+	
+	\begin{tcolorbox}[formelbox]
+		\textbf{Allgemeine Lösung:}
+		\[
+		\boxed{y(x) = C \cdot e^{a\,x}}
+		\]
+	\end{tcolorbox}
+	
+	\begin{itemize}[noitemsep, topsep=2pt]
+		\item \textbf{Typ:} explizit, nicht elementar, 1.\ Ordnung, homogen linear
+		\item Lösungsmenge: 1-parametrige Familie; Parameter tritt \emph{multiplikativ} auf
+		\item \textbf{Herleitung:} Potenzreihenansatz $y(x)=\sum \frac{y_k}{k!}x^k$ führt auf die Exponentialreihe
+	\end{itemize}
+	
+	\textbf{Beispiel:} $y'(x)=-17\,y(x) \;\Rightarrow\; y(x)=C\,e^{-17x}$
+	
+	\vspace{0.8em}
+	
+	% ============================
+	\subsubsection*{\color{mainblue}3.\quad Harmonische DGL}
+	% ============================
+	
+	\[
+	y''(x) = -a^2\,y(x), \qquad a \in \mathbb{R}^+
+	\]
+	
+	\begin{tcolorbox}[formelbox]
+		\textbf{Allgemeine Lösung:}
+		\[
+		\boxed{y(x) = C_0\cos(ax) + C_1\sin(ax)}
+		\]
+	\end{tcolorbox}
+	
+	\begin{itemize}[noitemsep, topsep=2pt]
+		\item \textbf{Typ:} explizit, nicht elementar, 2.\ Ordnung, homogen linear
+		\item Lösungsmenge: 2-parametrige Familie; Parameter als Koeffizienten einer Linearkombination
+		\item \textbf{Herleitung:} Potenzreihenansatz $\Rightarrow$ gerade und ungerade Potenzen $\Rightarrow$ Cosinus- und Sinusreihe
+	\end{itemize}
+	
+	\textbf{Beispiel:} $y''(x)=-9\,y(x) \;\Rightarrow\; y(x) = C_0\cos(3x) + C_1\sin(3x)$
+	
+	\vspace{0.8em}
+	
+	% ============================
+	\subsubsection*{\color{mainblue}4.\quad Antiharmonische DGL}
+	% ============================
+	
+	\[
+	y''(x) = +a^2\,y(x), \qquad a \in \mathbb{R}^+
+	\]
+	
+	\begin{tcolorbox}[formelbox]
+		\textbf{Allgemeine Lösung:}
+		\[
+		\boxed{y(x) = C_0\cosh(ax) + C_1\sinh(ax)}
+		\]
+	\end{tcolorbox}
+	
+	\begin{itemize}[noitemsep, topsep=2pt]
+		\item \textbf{Typ:} explizit, nicht elementar, 2.\ Ordnung, homogen linear
+		\item Analog zur harmonischen DGL, aber \emph{ohne} Vorzeichen-Wechsel $\Rightarrow$ hyperbolische Funktionen
+		\item \textbf{Herleitung:} Potenzreihenansatz $\Rightarrow$ $\cosh$- und $\sinh$-Reihe
+	\end{itemize}
+	
+	\textbf{Beispiel:} $y''(x)=9\,y(x) \;\Rightarrow\; y(x) = C_0\cosh(3x) + C_1\sinh(3x)$
+	
+	\vspace{0.8em}
+	
+	% ============================
+	\subsubsection*{\color{mainblue}5.\quad Lineare DGL mit konstanten Koeffizienten}
+	% ============================
+	
+	\[
+	y^{(n)}(x) = a_{n-1}\,y^{(n-1)}(x) + \cdots + a_1\,y'(x) + a_0\,y(x) + b(x)
+	\]
+	
+	\begin{tcolorbox}[formelbox]
+		\textbf{Allgemeine Lösung (inhomogen):}
+		\[
+		\boxed{y(x) = \underbrace{C_0\,h_0(x) + \cdots + C_{n-1}\,h_{n-1}(x)}_{\text{allg.\ Lösung der homogenen DGL}} + \underbrace{p(x)}_{\text{partikuläre Lösung}}}
+		\]
+	\end{tcolorbox}
+	
+	\begin{itemize}[noitemsep, topsep=2pt]
+		\item $h_0,\dots,h_{n-1}$: $n$ \textbf{Grundlösungen} der assoziierten \emph{homogenen} DGL ($b=0$)
+		\item $p(x)$: eine \textbf{partikuläre Lösung} der \emph{inhomogenen} DGL ($C_i=0$)
+		\item \textbf{Rekursionsformel:} $y_{m+n} = a_{n-1}\,y_{m+n-1} + \cdots + a_0\,y_m + b_m$
+	\end{itemize}
+	
+	\begin{tcolorbox}[hinweis]
+		\textbf{Merke:} Natürliches Wachstum, harmonische und antiharmonische DGL sind
+		Spezialfälle dieser homogenen linearen DGL.
+	\end{tcolorbox}
+	
+	\textbf{Beispiele:}\\
+	$y'(x)=-17\,y(x)+17 \;\Rightarrow\; y(x)=C\,e^{-17x}+1$\\
+	$y''(x)=-9\,y(x)+9 \;\Rightarrow\; y(x)=C_0\cos(3x)+C_1\sin(3x)+1$
+	
+	\vspace{0.8em}
+	
+	% ============================
+	\subsubsection*{\color{mainblue}6.\quad Die Schwingungsgleichung}
+	% ============================
+	
+	\[
+	\ddot{x}(t) + 2\rho\,\dot{x}(t) + \omega_0^2\,x(t) = 0,
+	\qquad \rho,\,\omega_0 > 0
+	\]
+	
+	\begin{itemize}[noitemsep, topsep=2pt]
+		\item $\rho$: Dämpfungskonstante \qquad $\omega_0$: Eigenkreisfrequenz des ungedämpften Systems
+	\end{itemize}
+	
+	\paragraph*{Euler-Ansatz}\mbox{}\\
+	Ansatz $h(t)=e^{\lambda t}$ liefert das \textbf{charakteristische Polynom}:
+	\[
+	\lambda^2 + 2\rho\,\lambda + \omega_0^2 = 0
+	\qquad\Rightarrow\qquad
+	\lambda_{1,2} = -\rho \pm \sqrt{\rho^2 - \omega_0^2}
+	\]
+	
+	Das Lösungsverhalten hängt von der \textbf{Diskriminante} $\Delta = \rho^2 - \omega_0^2$ ab:
+	
+	\vspace{0.5em}
+	\renewcommand{\arraystretch}{1.6}
+	\begin{tabular}{>{\bfseries}p{3.8cm} p{3.8cm} p{7cm}}
+		\toprule
+		\textbf{Fall} & \textbf{Bedingung} & \textbf{Allgemeine Lösung} \\
+		\midrule
+		Starke Dämpfung
+		& $\Delta>0$, $\rho>\omega_0$
+		& $x(t)=e^{-\rho t}\!\bigl(C_1\cosh(\omega_1 t)+C_2\sinh(\omega_1 t)\bigr)$ \\
+		Schwache Dämpfung
+		& $\Delta<0$, $\rho<\omega_0$
+		& $x(t)=e^{-\rho t}\!\bigl(C_1\cos(\omega_1 t)+C_2\sin(\omega_1 t)\bigr)$ \\
+		Kritische Dämpfung
+		& $\Delta=0$, $\rho=\omega_0$
+		& $x(t)=e^{-\rho t}(C_1+C_2\,t)$ \\
+		\bottomrule
+	\end{tabular}
+	
+	\[
+	\omega_1 = \sqrt{|\Delta|} = \sqrt{|\rho^2-\omega_0^2|}
+	\]
+	
+	\paragraph*{d'Alembert-Ansatz (schwache Dämpfung)}\mbox{}\\
+	Ansatz $h(t)=e^{-\rho t}\cdot u(t)$ reduziert die Schwingungsgleichung auf eine
+	\textbf{harmonische DGL} für $u(t)$:
+	\[
+	u''(t)+(\omega_0^2-\rho^2)\,u(t)=0
+	\;\Rightarrow\;
+	u(t)=C_1\cos(\omega_1 t)+C_2\sin(\omega_1 t)
+	\]
+	
+	\begin{tcolorbox}[hinweis]
+		\textbf{Anwendung RLC-Kreis:}\;
+		$\dfrac{d^2i}{dt^2}+\dfrac{R}{L}\dfrac{di}{dt}+\dfrac{1}{LC}i=0$
+		\;mit\; $\omega_0=\tfrac{1}{\sqrt{LC}}$,\; $\delta=\tfrac{R}{2L}$,\; $\omega_1=\sqrt{\omega_0^2-\delta^2}$
+	\end{tcolorbox}
+	
+	\vspace{0.8em}
+	\hrule height 0.8pt
+	\vspace{0.5em}
+	\begin{center}
+		{\large\textbf{\color{mainblue}Übersichtstabelle: DGL-Typen}}
+	\end{center}
+	
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{>{\bfseries}p{4.0cm} p{3.8cm} p{7cm}}
+		\toprule
+		\textbf{Typ} & \textbf{DGL} & \textbf{Allg.\ Lösung} \\
+		\midrule
+		Elementar (1.\ Ord.)       & $y'=a(x)$                         & $y=A(x)+C$ \\
+		Elementar ($n$-ter Ord.)   & $y^{(n)}=a(x)$                    & $y=A_n(x)+C_0+C_1 x+\cdots+C_{n-1}x^{n-1}$ \\
+		Natürl.\ Wachstum          & $y'=a\,y$                         & $y=C\,e^{ax}$ \\
+		Harmonisch                 & $y''=-a^2 y$                      & $y=C_0\cos(ax)+C_1\sin(ax)$ \\
+		Antiharmonisch             & $y''=+a^2 y$                      & $y=C_0\cosh(ax)+C_1\sinh(ax)$ \\
+		Lin.\ Kst.\ Koeff.         & $y^{(n)}=\sum a_k y^{(k)}+b(x)$  & $y=\sum C_k h_k+p$ \\
+		Schwingungsgl.\ ($\Delta>0$) & $\ddot x+2\rho\dot x+\omega_0^2 x=0$ & $e^{-\rho t}(C_1\cosh\omega_1 t+C_2\sinh\omega_1 t)$ \\
+		Schwingungsgl.\ ($\Delta<0$) & $\ddot x+2\rho\dot x+\omega_0^2 x=0$ & $e^{-\rho t}(C_1\cos\omega_1 t+C_2\sin\omega_1 t)$ \\
+		Schwingungsgl.\ ($\Delta=0$) & $\ddot x+2\rho\dot x+\omega_0^2 x=0$ & $e^{-\rho t}(C_1+C_2\,t)$ \\
+		\bottomrule
+	\end{tabular}
+	
+\end{document}

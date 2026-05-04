@@ -1,29 +1,89 @@
-\documentclass[12pt,a4paper]{article}
-
+\documentclass[a4paper, 11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[english]{babel}
-\usepackage[margin=2.5cm]{geometry}
-\usepackage{amsmath, amssymb, amsthm}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{csquotes}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage{enumitem}
+\usepackage{parskip}
 \usepackage{subfiles}
-\setcounter{tocdepth}{4}
+\usepackage{hyperref}
+
+\geometry{margin=2.2cm}
+
+% --- Farben ---
+\definecolor{mainblue}{RGB}{25, 70, 140}
+\definecolor{lightblue}{RGB}{220, 235, 255}
+\definecolor{darkgrey}{RGB}{60, 60, 60}
+\definecolor{formulagreen}{RGB}{0, 100, 60}
+\definecolor{lightgreen}{RGB}{220, 245, 230}
+\definecolor{lightyellow}{RGB}{255, 250, 220}
+
+% --- Box-Stile ---
+\tcbset{
+	dglbox/.style={
+		colback=lightblue,
+		colframe=mainblue,
+		fonttitle=\bfseries\color{white},
+		coltitle=white,
+		colbacktitle=mainblue,
+		boxrule=0.8pt,
+		arc=4pt,
+		left=6pt, right=6pt, top=4pt, bottom=4pt,
+		breakable
+	},
+	formelbox/.style={
+		colback=lightgreen,
+		colframe=formulagreen,
+		boxrule=0.8pt,
+		arc=4pt,
+		left=6pt, right=6pt, top=4pt, bottom=4pt,
+		breakable
+	},
+	hinweis/.style={
+		colback=lightyellow,
+		colframe=orange!70!black,
+		boxrule=0.6pt,
+		arc=3pt,
+		left=5pt, right=5pt, top=3pt, bottom=3pt,
+		breakable
+	}
+}
 
 \begin{document}
-    \tableofcontents
-    
-    \section{Elementare Geometrie}
-    \subfile{sections/elementare_geometrie}
-    \section{Gesetze der Algebra}
-    \subfile{sections/gesetze_der_algebra}
-    \section{Trigonometrie}
-    \subfile{sections/trigonometrie}
-    \section{Funktionen}
-    \subfile{sections/funktionen}
-    \section{Analysis}
-    \subfile{sections/analysis}
-    
-    
+	
+	\begin{center}
+		{\LARGE \textbf{\color{mainblue}Zusammenfassung Analysis}}\\[6pt]
+		{\large\color{darkgrey}Formelsammlung \& Lösungsstrategien}
+	\end{center}
+	\vspace{0.5em}
+	\hrule height 1.5pt
+	\vspace{1em}
+	
+	\tableofcontents
+	\newpage
+	
+	\section{Elementare Geometrie}
+	\subfile{sections/elementare_geometrie}
+	
+	\section{Gesetze der Algebra}
+	\subfile{sections/gesetze_der_algebra}
+	
+	\section{Trigonometrie}
+	\subfile{sections/trigonometrie}
+	
+	\section{Funktionen}
+	\subfile{sections/funktionen}
+	
+	\section{Analysis}
+	\subfile{sections/analysis}
+	
+	\section{Potenzreihenentwicklung}
+	\subfile{sections/potenzreihen}
+	
 \end{document}

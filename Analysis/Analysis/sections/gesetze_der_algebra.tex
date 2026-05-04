@@ -1,19 +1,177 @@
-   
-\subsection{Fakultät}
-$$0! = 1$$
-
-$$n!=n(n-1)!$$
-
-$$(n+1)!=n!(n+1)$$
-
-$$(n+k)!=(n+k)...(n+1)n!$$
-
-\subsection{Algebra Tricks}
-
-\subsubsection{Brüche Gleichnahmig machen}
-
-\subsubsection{Brüche auseinander ziehen}
-
-\subsubsection{Brüche Rationalisieren}
-
-\subsubsection{Gleichung Addieren und Subtrahieren}
+\documentclass[../zusammenfassung_AN.tex]{subfiles}
+\begin{document}
+	
+	% -------------------------------------------------------
+	\subsection{Fakultät}
+	% -------------------------------------------------------
+	
+	\begin{tcolorbox}[formelbox]
+		\[
+		0! = 1 \qquad
+		n! = n\cdot(n-1)! \qquad
+		(n+1)! = n!\cdot(n+1) \qquad
+		(n+k)! = (n+k)\cdots(n+1)\cdot n!
+		\]
+	\end{tcolorbox}
+	
+	% -------------------------------------------------------
+	\subsection{Rechengesetze}
+	% -------------------------------------------------------
+	
+	\begin{tcolorbox}[dglbox, title={Grundgesetze der Arithmetik}]
+		\textbf{Assoziativgesetz}
+		\[
+		a+(b+c) = (a+b)+c \qquad a\cdot(b\cdot c) = (a\cdot b)\cdot c
+		\]
+		\textbf{Kommutativgesetz}
+		\[
+		a+b = b+a \qquad a\cdot b = b\cdot a
+		\]
+		\textbf{Distributivgesetz}
+		\[
+		a\cdot(b+c) = a\cdot b + a\cdot c
+		\]
+	\end{tcolorbox}
+	
+	% -------------------------------------------------------
+	\subsection{Klammern}
+	% -------------------------------------------------------
+	
+	\begin{tcolorbox}[formelbox]
+		\textbf{Negative Klammer}
+		\[
+		-(a+b-c) = (-1)\cdot(a+b-c) = -a - b + c
+		\]
+	\end{tcolorbox}
+	
+	% -------------------------------------------------------
+	\subsection{Brüche}
+	% -------------------------------------------------------
+	
+	\begin{tcolorbox}[dglbox, title={Bruchrechnung}]
+		\renewcommand{\arraystretch}{1.8}
+		\begin{tabular}{ll}
+			\textbf{Addition (gleicher Nenner)}   & $\dfrac{a}{b}+\dfrac{c}{b} = \dfrac{a+c}{b}$ \\
+			\textbf{Subtraktion (gleicher Nenner)}& $\dfrac{a}{b}-\dfrac{c}{b} = \dfrac{a-c}{b}$ \\
+			\textbf{Gleichnamig machen}           & $\dfrac{a}{b}+\dfrac{c}{d} = \dfrac{ad+bc}{bd}$ \\[4pt]
+			\textbf{Multiplikation}               & $\dfrac{a}{b}\cdot\dfrac{c}{d} = \dfrac{ac}{bd}$ \\
+			\textbf{Division}                     & $\dfrac{a}{b}\div\dfrac{c}{d} = \dfrac{ad}{bc}$ \\[4pt]
+			\textbf{Rationalisieren}              & $\dfrac{1}{\sqrt{2}} = \dfrac{1}{\sqrt{2}}\cdot\dfrac{\sqrt{2}}{\sqrt{2}} = \dfrac{\sqrt{2}}{2}$ \\
+		\end{tabular}
+		
+		\medskip
+		\textbf{Weitere Bruchregeln:}
+		\[
+		\frac{a}{b}\cdot n = \frac{a\cdot n}{b} \qquad
+		\frac{a}{\,\frac{b}{c}\,} = \frac{ac}{b} \qquad
+		\frac{\,\frac{a}{b}\,}{c} = \frac{a}{bc}
+		\]
+	\end{tcolorbox}
+	
+	% -------------------------------------------------------
+	\subsection{Potenzen}
+	% -------------------------------------------------------
+	
+	\begin{tcolorbox}[formelbox]
+		\renewcommand{\arraystretch}{1.5}
+		\begin{tabular}{ll}
+			Gleicher Exponent (Mult.)  & $a^n b^n = (ab)^n$ \\
+			Gleiche Basis (Mult.)      & $a^n a^m = a^{n+m}$ \\
+			Gleicher Exponent (Div.)   & $\dfrac{a^n}{b^n} = \left(\dfrac{a}{b}\right)^n$ \\[6pt]
+			Gleiche Basis (Div.)       & $\dfrac{a^n}{a^m} = a^{n-m}$ \\[6pt]
+			Potenz potenzieren         & $(a^m)^n = a^{mn}$ \\
+			Null-Exponent              & $a^0 = 1$ \\
+			Negativer Exponent         & $a^{-n} = \dfrac{1}{a^n}$ \\
+		\end{tabular}
+	\end{tcolorbox}
+	
+	% -------------------------------------------------------
+	\subsection{Wurzeln}
+	% -------------------------------------------------------
+	
+	\begin{tcolorbox}[formelbox]
+		\renewcommand{\arraystretch}{1.5}
+		\begin{tabular}{ll}
+			Grundregeln        & $\sqrt{0}=0,\quad \sqrt[1]{a}=a$ \\
+			Addition           & $a\sqrt[n]{x}+b\sqrt[n]{x}=(a+b)\sqrt[n]{x}$ \\
+			Multiplikation     & $\sqrt{a}\cdot\sqrt{b}=\sqrt{ab}$ \\
+			Division           & $\dfrac{\sqrt{n}}{\sqrt{m}}=\sqrt{\dfrac{n}{m}}$ \\[6pt]
+			Potenzregel        & $\left(\sqrt[n]{a}\right)^m=\sqrt[n]{a^m}$ \\
+			Wurzel radizieren  & $\sqrt[n]{\sqrt[m]{a}}=\sqrt[nm]{a}$ \\
+			Umformen           & $a^{\frac{1}{m}}=\sqrt[m]{a}$ \quad und \quad $a^{\frac{n}{m}}=\sqrt[m]{a^n}$ \\
+		\end{tabular}
+	\end{tcolorbox}
+	
+	% -------------------------------------------------------
+	\subsection{Binomische Formeln}
+	% -------------------------------------------------------
+	
+	\begin{tcolorbox}[dglbox, title={Binomische Formeln}]
+		\[
+		(a+b)^2 = a^2 + 2ab + b^2 \qquad \text{(1. Binomische Formel)}
+		\]
+		\[
+		(a-b)^2 = a^2 - 2ab + b^2 \qquad \text{(2. Binomische Formel)}
+		\]
+		\[
+		(a+b)(a-b) = a^2 - b^2 \qquad \text{(3. Binomische Formel)}
+		\]
+	\end{tcolorbox}
+	
+	% -------------------------------------------------------
+	\subsection{Faktorisieren und Ausklammern}
+	% -------------------------------------------------------
+	
+	\begin{tcolorbox}[hinweis]
+		\textbf{Beispiele:}
+		\begin{enumerate}[noitemsep]
+			\item Quadratische Wurzel faktorisieren: \quad $(1-x^4) = (1+x^2)(1-x^2)$
+			\item Ausklammern von Wurzeltermen:
+			\[
+			\sqrt{1-x^4}\cdot\sqrt{1-x^2}+\sqrt{1-x^2}
+			=\bigl(\sqrt{1-x^4}+1\bigr)\sqrt{1-x^2}
+			\]
+		\end{enumerate}
+	\end{tcolorbox}
+	
+	% -------------------------------------------------------
+	\subsection{Logarithmen}
+	% -------------------------------------------------------
+	
+	\begin{tcolorbox}[dglbox, title={Logarithmengesetze}]
+		\renewcommand{\arraystretch}{1.6}
+		\begin{tabular}{ll}
+			\textbf{Definition}       & $y = \log_a(x) \;\Leftrightarrow\; a^y = x$ \\
+			\textbf{Produktregel}     & $\log_a(x\cdot y) = \log_a(x) + \log_a(y)$ \\
+			\textbf{Quotientenregel}  & $\log_a\!\left(\dfrac{x}{y}\right) = \log_a(x) - \log_a(y)$ \\[6pt]
+			\textbf{Potenzregel}      & $\log_a(x^r) = r\cdot\log_a(x)$ \\
+			\textbf{Wurzelregel}      & $\log_a(\sqrt[r]{x}) = \dfrac{1}{r}\log_a(x)$ \\[6pt]
+			\textbf{Basiswechsel}     & $\log_a(x) = \dfrac{\log_b(x)}{\log_b(a)}$ \\[6pt]
+			$\log_a(a)=1$             & $\log_a(1) = 0$ \\
+		\end{tabular}
+	\end{tcolorbox}
+	
+	\begin{tcolorbox}[formelbox]
+		\textbf{Fundamentalgesetz der Logarithmen:}
+		\[
+		\log_a(a^x) = x \quad (a>0,\; a\neq 1)
+		\qquad
+		a^{\log_a(x)} = x \quad (x>0)
+		\]
+	\end{tcolorbox}
+	
+	% -------------------------------------------------------
+	\subsection{Algebra-Tricks}
+	% -------------------------------------------------------
+	
+	\begin{tcolorbox}[hinweis]
+		\begin{enumerate}[noitemsep]
+			\item \textbf{Brüche gleichnamig machen:} Gemeinsamen Nenner suchen (kgV)
+			\item \textbf{Brüche auseinanderziehen:} $\dfrac{a+b}{c} = \dfrac{a}{c} + \dfrac{b}{c}$
+			\item \textbf{Rationalisieren:} Nenner von Wurzeln durch Erweitern beseitigen
+			\item \textbf{Gleichung addieren/subtrahieren:} Gleiche Terme auf beide Seiten bringen
+			\item \textbf{Keine Konstanten durch Rechnung ziehen:} z.\,B.\ $\sqrt{a+b} \neq \sqrt{a}+\sqrt{b}$
+		\end{enumerate}
+	\end{tcolorbox}
+	
+\end{document}

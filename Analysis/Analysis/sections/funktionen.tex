@@ -1,81 +1,115 @@
-\subsection{Eigenschaften von Funktionen}
-
-\subsubsection{Symterieverhalten}
-
-\paragraph{Punktsymetire - gerade Funktion}
-
-$$f(-x)=f(x)$$
-
-Beispiel:
-
-$$f(x) = cos(x)$$ 
-$$f(x) = x²$$
-
-\paragraph{Achensymetire - ungerade Funktion}
-
-$$f(-x)=-f(x)$$
-
-Beispiel: 
-
-$$f(x) = sin(x)$$ 
-$$f(x) = x³$$
-
-\subsubsection{Monotonie}
-
-\textbf{Definition:} $x_1$ und $x_2$ seien zwei belibige Werte aus dem Definitionsbreich $\mathbb{D}$ eienr Funktion $y = f(x)$, die der Bedingung $x_1 < x_2$ genügt. Dann heisst die Funktion:
-\\
-\\
-\textit{monoton wachsend, falls} $f(x_1) \le f(x_2)$ 
-\\
-\textit{streng monoton wachsend, falls} $f(x_1) < f(x_2)$
-\\
-\textit{monoton fallend, falls} $f(x_1) \ge f(x_2)$ 
-\\
-\textit{streng monoton fallend, falls} $f(x_1) > f(x_2)$
-
-\subsubsection{Periodizität}
-
-\textbf{Definition}: Eine Funktion $y=f(x)$ heisst periodisch mit der Periode $p$, wenn mit jedem $x \in \mathbb{D}$ auch $x \pm p$ zum definitionsbrereich der Funktion gehärt und
-$$f(x \pm p) = f(x)$$
-ist.
-
-\begin{enumerate}
-	\item mit der Periode $p$ ist auch $\pm k * p$ eine Periode der Funktion $k \in \mathbb{N}_0$
-	\item Die kleinste positive Periode $p$ heisst auch primitive Periode.
-\end{enumerate}
-
-\subsubsection{Umkehrfunktion oder Inverse Funktion}
-
-\subsection{Ganzrationale Funktionen (Polynomfunktionen)}
-
-\subsubsection{Konstanten (Grad 0)}
-
-\subsubsection{Lineare Funktionen (Grad 1)}
-
-\paragraph{Normalform}
-
-\paragraph{Punktsteigungsform}
-
-\paragraph{Zwei-PunkteForm}
-
-\paragraph{Achsenabschnittsform}
-
-\subsubsection{Quadratische Funktionen (Grad 2)}
-
-\paragraph{Normalform}
-
-\paragraph{Produktform (Nullstellenform)}
-
-\paragraph{Scheitelpunktform}
-
-\subsection{Gebrochen Rationale Funktionen}
-
-\subsection{Hyperbel und Areafunktionen}
-
-$$\sinh(x) = \frac{e^x - e^{-x}}{2} \qquad \cosh(x) = \frac{e^x + e^{-x}}{2}$$
-
-$$\tanh(x) = \frac{\sinh(x)}{\cosh(x)} = \frac{e^x - e^{-x}}{e^x + e^{-x}}$$
-
-\paragraph{Hyperbolische Pythagoras}
-
-$$cosh^2(x) - sinh^2(x) = 1$$
+\documentclass[../zusammenfassung_AN.tex]{subfiles}
+\begin{document}
+	
+	% -------------------------------------------------------
+	\subsection{Eigenschaften von Funktionen}
+	% -------------------------------------------------------
+	
+	\subsubsection{Symmetrieverhalten}
+	
+	\begin{tcolorbox}[dglbox, title={Symmetrie}]
+		\textbf{Achsensymmetrie — gerade Funktion:}
+		\[
+		f(-x) = f(x)
+		\qquad \text{Beispiele: } f(x)=\cos(x),\quad f(x)=x^2
+		\]
+		\textbf{Punktsymmetrie (zum Ursprung) — ungerade Funktion:}
+		\[
+		f(-x) = -f(x)
+		\qquad \text{Beispiele: } f(x)=\sin(x),\quad f(x)=x^3
+		\]
+	\end{tcolorbox}
+	
+	\subsubsection{Monotonie}
+	
+	\begin{tcolorbox}[formelbox]
+		Seien $x_1, x_2 \in \mathbb{D}$ mit $x_1 < x_2$. Die Funktion $f$ heisst:
+		\begin{itemize}[noitemsep]
+			\item \textit{monoton wachsend}, falls $f(x_1) \le f(x_2)$
+			\item \textit{streng monoton wachsend}, falls $f(x_1) < f(x_2)$
+			\item \textit{monoton fallend}, falls $f(x_1) \ge f(x_2)$
+			\item \textit{streng monoton fallend}, falls $f(x_1) > f(x_2)$
+		\end{itemize}
+	\end{tcolorbox}
+	
+	\subsubsection{Periodizität}
+	
+	\begin{tcolorbox}[formelbox]
+		$f$ heisst periodisch mit der Periode $p > 0$, falls für alle $x \in \mathbb{D}$:
+		\[
+		f(x \pm p) = f(x)
+		\]
+	\end{tcolorbox}
+	
+	\begin{itemize}[noitemsep]
+		\item Mit $p$ sind auch $\pm k\cdot p$ Perioden der Funktion ($k \in \mathbb{N}_0$)
+		\item Die kleinste positive Periode heisst \textbf{primitive Periode}
+	\end{itemize}
+	
+	\subsubsection{Umkehrfunktion (Inverse Funktion)}
+	
+	\begin{tcolorbox}[hinweis]
+		Existiert nur, wenn $f$ \textbf{streng monoton} (bijektiv) ist.
+		Dann gilt: $f^{-1}(f(x)) = x$.\\
+		Geometrisch: Graph von $f^{-1}$ ist die Spiegelung des Graphs von $f$ an der Geraden $y=x$.
+	\end{tcolorbox}
+	
+	% -------------------------------------------------------
+	\subsection{Ganzrationale Funktionen (Polynomfunktionen)}
+	% -------------------------------------------------------
+	
+	\subsubsection{Lineare Funktionen (Grad 1)}
+	
+	\begin{tcolorbox}[formelbox]
+		\renewcommand{\arraystretch}{1.5}
+		\begin{tabular}{ll}
+			\textbf{Normalform}         & $y = mx + b$ \\
+			\textbf{Punkt-Steigungs-Form} & $y - y_1 = m(x-x_1)$ \\
+			\textbf{Zwei-Punkte-Form}   & $\dfrac{y-y_1}{x-x_1} = \dfrac{y_2-y_1}{x_2-x_1}$ \\[6pt]
+			\textbf{Achsenabschnittsform} & $\dfrac{x}{a}+\dfrac{y}{b}=1$ \\
+		\end{tabular}
+	\end{tcolorbox}
+	
+	\subsubsection{Quadratische Funktionen (Grad 2)}
+	
+	\begin{tcolorbox}[formelbox]
+		\renewcommand{\arraystretch}{1.5}
+		\begin{tabular}{ll}
+			\textbf{Normalform}           & $y = ax^2 + bx + c$ \\
+			\textbf{Scheitelpunktform}    & $y = a(x-x_S)^2 + y_S$ \\
+			\textbf{Nullstellenform}      & $y = a(x-x_1)(x-x_2)$ \\
+		\end{tabular}
+		
+		\medskip
+		\textbf{Nullstellen (Lösungsformel):}
+		\[
+		x_{1,2} = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
+		\]
+	\end{tcolorbox}
+	
+	% -------------------------------------------------------
+	\subsection{Gebrochen-Rationale Funktionen}
+	% -------------------------------------------------------
+	
+	\begin{tcolorbox}[hinweis]
+		Form: $f(x) = \dfrac{p(x)}{q(x)}$, wobei $p$ und $q$ Polynome sind.
+		Definitionslücken bei $q(x)=0$ (hebbar oder Pol).
+	\end{tcolorbox}
+	
+	% -------------------------------------------------------
+	\subsection{Hyperbel- und Areafunktionen}
+	% -------------------------------------------------------
+	
+	\begin{tcolorbox}[dglbox, title={Hyperbolische Funktionen}]
+		\[
+		\sinh(x) = \frac{e^x - e^{-x}}{2} \qquad
+		\cosh(x) = \frac{e^x + e^{-x}}{2} \qquad
+		\tanh(x) = \frac{\sinh(x)}{\cosh(x)} = \frac{e^x - e^{-x}}{e^x + e^{-x}}
+		\]
+		\textbf{Hyperbolischer Pythagoras:}
+		\[
+		\cosh^2(x) - \sinh^2(x) = 1
+		\]
+	\end{tcolorbox}
+	
+\end{document}

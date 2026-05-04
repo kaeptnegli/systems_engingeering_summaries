@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.2.13)  14 MAR 2026 17:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.3.15)  16 APR 2026 17:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -349,235 +349,898 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-(./Zusammenfassung_EL2.toc)
-\tf@toc=\write3
-\openout3 = `Zusammenfassung_EL2.toc'.
-
-<img/wirkwiderstand.png, id=1, 630.355pt x 778.91pt>
-File: img/wirkwiderstand.png Graphic file (type png)
-<use img/wirkwiderstand.png>
-Package pdftex.def Info: img/wirkwiderstand.png  used on input line 32.
-(pdftex.def)             Requested size: 241.84843pt x 298.84132pt.
-
-Overfull \hbox (24.18633pt too wide) in paragraph at lines 32--33
-[][]| 
- []
-
-
+(./Zusammenfassung_EL2.toc
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<img/kondensator_wechselfrequenz.png, id=11, 586.19pt x 797.98125pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
+\tf@toc=\write3
+\openout3 = `Zusammenfassung_EL2.toc'.
+
+
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 51--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--57
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--61
+
+ []
+
+<img/spule_laden.png, id=13, 2398.9625pt x 1055.945pt>
+File: img/spule_laden.png Graphic file (type png)
+<use img/spule_laden.png>
+Package pdftex.def Info: img/spule_laden.png  used on input line 75.
+(pdftex.def)             Requested size: 241.84843pt x 106.43852pt.
+
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 75--76
+[][]| 
+ []
+
+<img/spule_entladen.png, id=15, 2398.9625pt x 1055.945pt>
+File: img/spule_entladen.png Graphic file (type png)
+<use img/spule_entladen.png>
+Package pdftex.def Info: img/spule_entladen.png  used on input line 83.
+(pdftex.def)             Requested size: 241.84843pt x 106.43852pt.
+
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 83--84
+[][]| 
+ []
+
+
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 110--115
+
+ []
+
+<img/schaltung_spule.png, id=24, 529.98pt x 274.02374pt>
+File: img/schaltung_spule.png Graphic file (type png)
+<use img/schaltung_spule.png>
+Package pdftex.def Info: img/schaltung_spule.png  used on input line 136.
+(pdftex.def)             Requested size: 241.84843pt x 125.04893pt.
+
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 136--137
+[][]| 
+ []
+
+
+
+[4 <./img/spule_laden.png> <./img/spule_entladen.png>]
+<img/wirkwiderstand.png, id=32, 630.355pt x 778.91pt>
+File: img/wirkwiderstand.png Graphic file (type png)
+<use img/wirkwiderstand.png>
+Package pdftex.def Info: img/wirkwiderstand.png  used on input line 153.
+(pdftex.def)             Requested size: 241.84843pt x 298.84132pt.
+
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 153--154
+[][]| 
+ []
+
+<img/kondensator_wechselfrequenz.png, id=33, 586.19pt x 797.98125pt>
 File: img/kondensator_wechselfrequenz.png Graphic file (type png)
 <use img/kondensator_wechselfrequenz.png>
 Package pdftex.def Info: img/kondensator_wechselfrequenz.png  used on input lin
-e 51.
+e 172.
 (pdftex.def)             Requested size: 241.84843pt x 329.22003pt.
 
-Overfull \hbox (24.18633pt too wide) in paragraph at lines 51--52
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 172--173
 [][]| 
  []
 
-<img/kondensator_phasenverschiebung.png, id=12, 622.325pt x 672.5125pt>
+<img/kondensator_phasenverschiebung.png, id=34, 622.325pt x 672.5125pt>
 File: img/kondensator_phasenverschiebung.png Graphic file (type png)
 <use img/kondensator_phasenverschiebung.png>
 Package pdftex.def Info: img/kondensator_phasenverschiebung.png  used on input 
-line 67.
+line 188.
 (pdftex.def)             Requested size: 241.84843pt x 261.35526pt.
 
-Overfull \hbox (24.18633pt too wide) in paragraph at lines 67--68
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 188--189
 [][]| 
  []
 
 
 
-[2 <./img/Wirkwiderstand.png>]
-Overfull \vbox (67.975pt too high) has occurred while \output is active []
+[5 <./img/schaltung_spule.png> <./img/Wirkwiderstand.png>]
+Overfull \vbox (68.44168pt too high) has occurred while \output is active []
 
 
 
-[3{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./img/kondensat
+[6{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./img/kondensat
 or_wechselfrequenz.png> <./img/kondensator_phasenverschiebung.png>]
-Underfull \hbox (badness 1527) in paragraph at lines 74--75
+Underfull \hbox (badness 1527) in paragraph at lines 195--196
 \OT1/cmr/m/n/12 Wi-der-stand. \OT1/cmr/bx/n/12 In-duk-ti-ver BLind-wi-der-
  []
 
-<img/spule_phasenverschiebung.png, id=26, 621.32124pt x 511.9125pt>
+<img/spule_phasenverschiebung.png, id=46, 621.32124pt x 511.9125pt>
 File: img/spule_phasenverschiebung.png Graphic file (type png)
 <use img/spule_phasenverschiebung.png>
-Package pdftex.def Info: img/spule_phasenverschiebung.png  used on input line 9
-7.
+Package pdftex.def Info: img/spule_phasenverschiebung.png  used on input line 2
+18.
 (pdftex.def)             Requested size: 241.84843pt x 199.26233pt.
 
-Overfull \hbox (24.18633pt too wide) in paragraph at lines 97--98
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 218--219
 [][]| 
  []
 
-<img/zusammenfassung.png, id=27, 1183.42125pt x 824.07875pt>
+<img/zusammenfassung.png, id=47, 1183.42125pt x 824.07875pt>
 File: img/zusammenfassung.png Graphic file (type png)
 <use img/zusammenfassung.png>
-Package pdftex.def Info: img/zusammenfassung.png  used on input line 102.
+Package pdftex.def Info: img/zusammenfassung.png  used on input line 223.
 (pdftex.def)             Requested size: 483.69687pt x 336.81822pt.
 
 
-[4 <./img/spule_phasenverschiebung.png>]
-<img/elektrische_gr√∂ssen.png, id=32, 543.02875pt x 252.945pt>
+[7 <./img/spule_phasenverschiebung.png>]
+<img/elektrische_gr√∂ssen.png, id=53, 543.02875pt x 252.945pt>
 File: img/elektrische_gr√∂ssen.png Graphic file (type png)
 <use img/elektrische_gr√∂ssen.png>
-Package pdftex.def Info: img/elektrische_gr√∂ssen.png  used on input line 113.
+Package pdftex.def Info: img/elektrische_gr√∂ssen.png  used on input line 234.
 (pdftex.def)             Requested size: 241.84843pt x 112.65472pt.
-<img/komplexer_elektrischer_widerstand.png, id=33, 420.57124pt x 312.16624pt>
+<img/komplexer_elektrischer_widerstand.png, id=54, 420.57124pt x 312.16624pt>
 File: img/komplexer_elektrischer_widerstand.png Graphic file (type png)
 <use img/komplexer_elektrischer_widerstand.png>
 Package pdftex.def Info: img/komplexer_elektrischer_widerstand.png  used on inp
-ut line 114.
+ut line 235.
 (pdftex.def)             Requested size: 241.84843pt x 179.51324pt.
 
-Overfull \hbox (24.18633pt too wide) in paragraph at lines 113--115
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 234--236
 [][]
  []
 
 
-Overfull \hbox (24.18633pt too wide) in paragraph at lines 113--115
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 234--236
 []| 
  []
 
 
-Underfull \hbox (badness 1248) in paragraph at lines 117--118
+Underfull \hbox (badness 1248) in paragraph at lines 238--239
 []\OT1/cmr/bx/n/12 Komplexer ka-pa-zi-ti-ver Blind-wi-der-
  []
 
 
-Overfull \hbox (4.20267pt too wide) detected at line 122
+Overfull \hbox (4.20267pt too wide) detected at line 243
 []\OML/cmm/m/it/12 X[] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 j
 X[] \OT1/cmr/m/n/12 = [] = \OML/cmm/m/it/12 X[] \OMS/cmsy/m/n/12 ^^C \OML/cmm/m
 /it/12 e[]
  []
 
 
-Underfull \hbox (badness 2884) in paragraph at lines 125--126
+Underfull \hbox (badness 2884) in paragraph at lines 246--247
 []\OT1/cmr/bx/n/12 Komplexer in-duk-ti-ver Blind-wi-der-
  []
 
 
-Overfull \hbox (8.70227pt too wide) detected at line 139
+Overfull \hbox (8.70227pt too wide) detected at line 260
 [] \OT1/cmr/m/n/12 = []
  []
 
 
-Underfull \hbox (badness 2617) in paragraph at lines 145--146
+Underfull \hbox (badness 2617) in paragraph at lines 266--267
 []\OT1/cmr/bx/n/12 Normalform kom-ple-xer elek-tri-sche
  []
 
 
 
-[5 <./img/zusammenfassung.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
+[8 <./img/zusammenfassung.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
 \OT1/cmr/m/n/12 Wirk-wi-der-stand und Kon-den-sa-tor an
  []
 
 
-Underfull \hbox (badness 5147) in paragraph at lines 164--165
+Underfull \hbox (badness 5147) in paragraph at lines 285--286
 \OT1/cmr/m/n/12 der \OT1/cmr/bx/n/12 Pha-sen-ver-schie-bung \OT1/cmr/m/n/12 von
  Strom
  []
 
 
-Underfull \hbox (badness 3098) in paragraph at lines 164--165
+Underfull \hbox (badness 3098) in paragraph at lines 285--286
 \OT1/cmr/m/n/12 ein-fach zu-sam-men-gez[]ahlt wer-den. Hier
  []
 
 
-Underfull \hbox (badness 1178) in paragraph at lines 164--165
+Underfull \hbox (badness 1178) in paragraph at lines 285--286
 \OT1/cmr/m/n/12 Kom-ple-xe zahl an-zu-schau-en mit ei-nem
  []
 
 
-Underfull \hbox (badness 1259) in paragraph at lines 164--165
+Underfull \hbox (badness 1259) in paragraph at lines 285--286
 \OT1/cmr/bx/n/12 Re-al-teil(Wirkwiderstand) \OT1/cmr/m/n/12 und ei-nem
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
 \OT1/cmr/bx/n/12 Ima-gni[]arteil(Blindwiderstand)\OT1/cmr/m/n/12 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
 \OT1/cmr/m/n/12 Da-mit l[]asst sich nun gut re-chen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
 \OT1/cmr/m/n/12 und mann kann die \OT1/cmr/bx/n/12 Schein-span-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
 \OT1/cmr/bx/n/12 nung(Gesamtspannung) \OT1/cmr/m/n/12 ein-fach
  []
 
 
-Underfull \hbox (badness 1281) in paragraph at lines 164--165
+Underfull \hbox (badness 1281) in paragraph at lines 285--286
 \OT1/cmr/m/n/12 er-mit-teln in-dem man den \OT1/cmr/bx/n/12 Be-trag \OT1/cmr/m/
 n/12 der
  []
 
-<img/reihenschaltung_rc.png, id=38, 397.485pt x 211.79124pt>
+<img/reihenschaltung_rc.png, id=59, 397.485pt x 211.79124pt>
 File: img/reihenschaltung_rc.png Graphic file (type png)
 <use img/reihenschaltung_rc.png>
-Package pdftex.def Info: img/reihenschaltung_rc.png  used on input line 171.
+Package pdftex.def Info: img/reihenschaltung_rc.png  used on input line 292.
 (pdftex.def)             Requested size: 241.84843pt x 128.86606pt.
-<img/reihenschaltung_rc_zeiger.png, id=39, 501.875pt x 279.0425pt>
+<img/reihenschaltung_rc_zeiger.png, id=60, 501.875pt x 279.0425pt>
 File: img/reihenschaltung_rc_zeiger.png Graphic file (type png)
 <use img/reihenschaltung_rc_zeiger.png>
 Package pdftex.def Info: img/reihenschaltung_rc_zeiger.png  used on input line 
-172.
+293.
 (pdftex.def)             Requested size: 241.84843pt x 134.4711pt.
 
-Overfull \hbox (24.18633pt too wide) in paragraph at lines 171--173
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 292--294
 [][]
  []
 
 
-Overfull \hbox (24.18633pt too wide) in paragraph at lines 171--173
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 292--294
 []| 
  []
 
-<img/reihenschaltung_scheinwiderstand.png, id=40, 482.80376pt x 275.0275pt>
+<img/reihenschaltung_scheinwiderstand.png, id=61, 482.80376pt x 275.0275pt>
 File: img/reihenschaltung_scheinwiderstand.png Graphic file (type png)
 <use img/reihenschaltung_scheinwiderstand.png>
 Package pdftex.def Info: img/reihenschaltung_scheinwiderstand.png  used on inpu
-t line 182.
+t line 303.
 (pdftex.def)             Requested size: 241.84843pt x 137.7694pt.
 
-Overfull \hbox (24.18633pt too wide) in paragraph at lines 182--183
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 303--304
 [][]| 
  []
 
 
 
-[6 <./img/elektrische_gr√∂ssen.png> <./img/komplexer_elektrischer_widerstand.pn
+[9 <./img/elektrische_gr√∂ssen.png> <./img/komplexer_elektrischer_widerstand.pn
 g>]
+Overfull \vbox (54.96385pt too high) has occurred while \output is active []
 
-[7 <./img/reihenschaltung_rc.png> <./img/reihenschaltung_rc_zeiger.png> <./img/
-reihenschaltung_scheinwiderstand.png>]
 
-[8] (./Zusammenfassung_EL2.aux)
+
+[10 <./img/reihenschaltung_rc.png> <./img/reihenschaltung_rc_zeiger.png> <./img
+/reihenschaltung_scheinwiderstand.png>]
+<img/reihenschaltung_rl.png, id=74, 362.35374pt x 147.55125pt>
+File: img/reihenschaltung_rl.png Graphic file (type png)
+<use img/reihenschaltung_rl.png>
+Package pdftex.def Info: img/reihenschaltung_rl.png  used on input line 373.
+(pdftex.def)             Requested size: 241.84843pt x 98.48282pt.
+<img/reihenschaltung_rl_zeiger.png, id=75, 404.51125pt x 197.73875pt>
+File: img/reihenschaltung_rl_zeiger.png Graphic file (type png)
+<use img/reihenschaltung_rl_zeiger.png>
+Package pdftex.def Info: img/reihenschaltung_rl_zeiger.png  used on input line 
+374.
+(pdftex.def)             Requested size: 241.84843pt x 118.22476pt.
+
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 373--375
+[][]
+ []
+
+
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 373--375
+[]| 
+ []
+
+<img/reihenschaltung_rl_scheinwiderstand.png, id=76, 336.25626pt x 222.8325pt>
+File: img/reihenschaltung_rl_scheinwiderstand.png Graphic file (type png)
+<use img/reihenschaltung_rl_scheinwiderstand.png>
+Package pdftex.def Info: img/reihenschaltung_rl_scheinwiderstand.png  used on i
+nput line 384.
+(pdftex.def)             Requested size: 241.84843pt x 160.26927pt.
+
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 384--385
+[][]| 
+ []
+
+
+Overfull \vbox (5.82193pt too high) has occurred while \output is active []
+
+
+
+[11 <./img/reihenschaltung_rl.png> <./img/reihenschaltung_rl_zeiger.png> <./img
+/reihenschaltung_rl_scheinwiderstand.png>]
+Underfull \hbox (badness 1014) in paragraph at lines 423--436
+\OT1/cmr/m/n/12 pha-sig-keit der bei-den Blind-span-nun-gen,
+ []
+
+<img/reihenschaltung_cl.png, id=83, 343.2825pt x 181.67876pt>
+File: img/reihenschaltung_cl.png Graphic file (type png)
+<use img/reihenschaltung_cl.png>
+Package pdftex.def Info: img/reihenschaltung_cl.png  used on input line 440.
+(pdftex.def)             Requested size: 193.47578pt x 102.39363pt.
+<img/reihenschaltung_cl_zeiger.png, id=84, 323.2075pt x 242.9075pt>
+File: img/reihenschaltung_cl_zeiger.png Graphic file (type png)
+<use img/reihenschaltung_cl_zeiger.png>
+Package pdftex.def Info: img/reihenschaltung_cl_zeiger.png  used on input line 
+441.
+(pdftex.def)             Requested size: 193.47578pt x 145.40833pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 440--442
+[][]
+ []
+
+<img/reihenschaltung_cl_1fall.png, id=85, 288.07625pt x 223.83624pt>
+File: img/reihenschaltung_cl_1fall.png Graphic file (type png)
+<use img/reihenschaltung_cl_1fall.png>
+Package pdftex.def Info: img/reihenschaltung_cl_1fall.png  used on input line 4
+53.
+(pdftex.def)             Requested size: 193.47578pt x 150.33495pt.
+<img/reihenschaltung_cl_2fall.png, id=86, 299.1175pt x 213.79875pt>
+File: img/reihenschaltung_cl_2fall.png Graphic file (type png)
+<use img/reihenschaltung_cl_2fall.png>
+Package pdftex.def Info: img/reihenschaltung_cl_2fall.png  used on input line 4
+64.
+(pdftex.def)             Requested size: 193.47578pt x 138.29224pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 480--491
+[]\OT1/cmr/m/n/12 Man be-ginnt Be-rech-nun-gen im
+ []
+
+
+Underfull \hbox (badness 2334) in paragraph at lines 480--491
+\OT1/cmr/m/n/12 Wechselstrom- kreis in der Re-gel mit
+ []
+
+
+Underfull \hbox (badness 1881) in paragraph at lines 480--491
+\OT1/cmr/m/n/12 aus-ge-gan-gen. Es w[]aren aber auch die
+ []
+
+<img/reihenschaltung_rlc.png, id=87, 379.4175pt x 160.6pt>
+File: img/reihenschaltung_rlc.png Graphic file (type png)
+<use img/reihenschaltung_rlc.png>
+Package pdftex.def Info: img/reihenschaltung_rlc.png  used on input line 497.
+(pdftex.def)             Requested size: 193.47578pt x 81.8951pt.
+<img/reihenschaltung_rlc_zeiger.png, id=88, 353.32pt x 213.79875pt>
+File: img/reihenschaltung_rlc_zeiger.png Graphic file (type png)
+<use img/reihenschaltung_rlc_zeiger.png>
+Package pdftex.def Info: img/reihenschaltung_rlc_zeiger.png  used on input line
+ 498.
+(pdftex.def)             Requested size: 193.47578pt x 117.07422pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 497--499
+[][]
+ []
+
+
+
+[12 <./img/reihenschaltung_cl.png> <./img/reihenschaltung_cl_zeiger.png> <./img
+/reihenschaltung_cl_1fall.png> <./img/reihenschaltung_cl_2fall.png>]
+<img/parallelschaltung_rc.png, id=96, 288.07625pt x 198.7425pt>
+File: img/parallelschaltung_rc.png Graphic file (type png)
+<use img/parallelschaltung_rc.png>
+Package pdftex.def Info: img/parallelschaltung_rc.png  used on input line 554.
+(pdftex.def)             Requested size: 193.47578pt x 133.48126pt.
+<img/parallelschaltung_rc_zeiger.png, id=97, 342.27875pt x 160.6pt>
+File: img/parallelschaltung_rc_zeiger.png Graphic file (type png)
+<use img/parallelschaltung_rc_zeiger.png>
+Package pdftex.def Info: img/parallelschaltung_rc_zeiger.png  used on input lin
+e 555.
+(pdftex.def)             Requested size: 193.47578pt x 90.78326pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 554--556
+[][]
+ []
+
+<img/parallelschaltung_rc_zeiger_leitwert.png, id=98, 486.81876pt x 217.81375pt
+>
+File: img/parallelschaltung_rc_zeiger_leitwert.png Graphic file (type png)
+<use img/parallelschaltung_rc_zeiger_leitwert.png>
+Package pdftex.def Info: img/parallelschaltung_rc_zeiger_leitwert.png  used on 
+input line 566.
+(pdftex.def)             Requested size: 193.47578pt x 86.56558pt.
+
+
+[13 <./img/reihenschaltung_rlc.png> <./img/reihenschaltung_rlc_zeiger.png>]
+Overfull \vbox (82.1295pt too high) has occurred while \output is active []
+
+
+
+[14 <./img/parallelschaltung_rc.png> <./img/parallelschaltung_rc_zeiger.png> <.
+/img/parallelschaltung_rc_zeiger_leitwert.png>]
+<img/parallelschaltung_rl.png, id=111, 291.0875pt x 168.63pt>
+File: img/parallelschaltung_rl.png Graphic file (type png)
+<use img/parallelschaltung_rl.png>
+Package pdftex.def Info: img/parallelschaltung_rl.png  used on input line 634.
+(pdftex.def)             Requested size: 193.47578pt x 112.0835pt.
+<img/parallelschaltung_rl_zeiger.png, id=112, 347.2975pt x 161.60374pt>
+File: img/parallelschaltung_rl_zeiger.png Graphic file (type png)
+<use img/parallelschaltung_rl_zeiger.png>
+Package pdftex.def Info: img/parallelschaltung_rl_zeiger.png  used on input lin
+e 635.
+(pdftex.def)             Requested size: 193.47578pt x 90.03142pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 634--636
+[][]
+ []
+
+<img/parallelschaltung_rl_zeiger_leitwert.png, id=113, 487.8225pt x 208.78pt>
+File: img/parallelschaltung_rl_zeiger_leitwert.png Graphic file (type png)
+<use img/parallelschaltung_rl_zeiger_leitwert.png>
+Package pdftex.def Info: img/parallelschaltung_rl_zeiger_leitwert.png  used on 
+input line 646.
+(pdftex.def)             Requested size: 193.47578pt x 82.80327pt.
+
+Overfull \vbox (81.11273pt too high) has occurred while \output is active []
+
+
+
+[15 <./img/parallelschaltung_rl.png> <./img/parallelschaltung_rl_zeiger.png> <.
+/img/parallelschaltung_rl_zeiger_leitwert.png>]
+<img/parallelschaltung_lc.png, id=120, 248.93pt x 181.67876pt>
+File: img/parallelschaltung_lc.png Graphic file (type png)
+<use img/parallelschaltung_lc.png>
+Package pdftex.def Info: img/parallelschaltung_lc.png  used on input line 711.
+(pdftex.def)             Requested size: 193.47578pt x 141.20985pt.
+<img/parallelschaltung_lc_zeiger.png, id=121, 321.2pt x 237.88875pt>
+File: img/parallelschaltung_lc_zeiger.png Graphic file (type png)
+<use img/parallelschaltung_lc_zeiger.png>
+Package pdftex.def Info: img/parallelschaltung_lc_zeiger.png  used on input lin
+e 712.
+(pdftex.def)             Requested size: 193.47578pt x 143.29697pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 711--713
+[][]
+ []
+
+
+Underfull \hbox (badness 2961) in paragraph at lines 716--717
+[]\OT1/cmr/m/n/12 Es ver-bleibt ein in-duk-ti-ver Rest-strom
+ []
+
+<img/parallelschaltung_lc_1fall.png, id=122, 342.27875pt x 203.76125pt>
+File: img/parallelschaltung_lc_1fall.png Graphic file (type png)
+<use img/parallelschaltung_lc_1fall.png>
+Package pdftex.def Info: img/parallelschaltung_lc_1fall.png  used on input line
+ 724.
+(pdftex.def)             Requested size: 193.47578pt x 115.18127pt.
+
+Underfull \hbox (badness 1917) in paragraph at lines 728--729
+[]\OT1/cmr/m/n/12 Es ver-bleibt ein ka-pa-zi-ti-ver Rest-strom
+ []
+
+<img/parallelschaltung_lc_2fall.png, id=123, 342.27875pt x 203.76125pt>
+File: img/parallelschaltung_lc_2fall.png Graphic file (type png)
+<use img/parallelschaltung_lc_2fall.png>
+Package pdftex.def Info: img/parallelschaltung_lc_2fall.png  used on input line
+ 736.
+(pdftex.def)             Requested size: 193.47578pt x 115.18127pt.
+
+Underfull \hbox (badness 1028) in paragraph at lines 752--757
+[]\OT1/cmr/m/n/12 Die Be-trach-tung ei-ner Par-al-lel-schal-tung
+ []
+
+<img/parallelschaltung_rlc.png, id=124, 271.0125pt x 197.73875pt>
+File: img/parallelschaltung_rlc.png Graphic file (type png)
+<use img/parallelschaltung_rlc.png>
+Package pdftex.def Info: img/parallelschaltung_rlc.png  used on input line 761.
+
+(pdftex.def)             Requested size: 193.47578pt x 141.17091pt.
+<img/parallelschaltung_rlc_zeiger.png, id=125, 406.51875pt x 197.73875pt>
+File: img/parallelschaltung_rlc_zeiger.png Graphic file (type png)
+<use img/parallelschaltung_rlc_zeiger.png>
+Package pdftex.def Info: img/parallelschaltung_rlc_zeiger.png  used on input li
+ne 762.
+(pdftex.def)             Requested size: 193.47578pt x 94.11093pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 761--763
+[][]
+ []
+
+
+Underfull \hbox (badness 4647) in paragraph at lines 775--776
+[]\OT1/cmr/bx/n/12 Komplexe schreib-wei-se Schein-leit-
+ []
+
+
+
+[16 <./img/parallelschaltung_lc.png> <./img/parallelschaltung_lc_zeiger.png> <.
+/img/parallelschaltung_lc_1fall.png> <./img/parallelschaltung_lc_2fall.png>]
+
+[17 <./img/parallelschaltung_rlc.png> <./img/parallelschaltung_rlc_zeiger.png>]
+<img/serienschwingkreis.png, id=138, 443.6575pt x 152.57pt>
+File: img/serienschwingkreis.png Graphic file (type png)
+<use img/serienschwingkreis.png>
+Package pdftex.def Info: img/serienschwingkreis.png  used on input line 865.
+(pdftex.def)             Requested size: 217.66211pt x 74.85074pt.
+<img/serienschwingkreis_zeiger.png, id=139, 337.26pt x 207.77625pt>
+File: img/serienschwingkreis_zeiger.png Graphic file (type png)
+<use img/serienschwingkreis_zeiger.png>
+Package pdftex.def Info: img/serienschwingkreis_zeiger.png  used on input line 
+866.
+(pdftex.def)             Requested size: 217.66211pt x 134.09865pt.
+
+
+[18]
+<img/serienschwingkreis_real.png, id=143, 401.5pt x 146.5475pt>
+File: img/serienschwingkreis_real.png Graphic file (type png)
+<use img/serienschwingkreis_real.png>
+Package pdftex.def Info: img/serienschwingkreis_real.png  used on input line 87
+9.
+(pdftex.def)             Requested size: 217.66211pt x 79.44751pt.
+<img/serienschwingkreis_real_zeiger.png, id=144, 281.05pt x 177.66376pt>
+File: img/serienschwingkreis_real_zeiger.png Graphic file (type png)
+<use img/serienschwingkreis_real_zeiger.png>
+Package pdftex.def Info: img/serienschwingkreis_real_zeiger.png  used on input 
+line 880.
+(pdftex.def)             Requested size: 217.66211pt x 137.5931pt.
+<img/serienschwinkreis_real_resonanzkurve.png, id=145, 477.785pt x 344.28625pt>
+
+File: img/serienschwinkreis_real_resonanzkurve.png Graphic file (type png)
+<use img/serienschwinkreis_real_resonanzkurve.png>
+Package pdftex.def Info: img/serienschwinkreis_real_resonanzkurve.png  used on 
+input line 883.
+(pdftex.def)             Requested size: 241.84843pt x 174.27031pt.
+
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 883--884
+[][]| 
+ []
+
+<img/idealer_parallelschwingkreis.png, id=146, 294.09875pt x 152.57pt>
+File: img/idealer_parallelschwingkreis.png Graphic file (type png)
+<use img/idealer_parallelschwingkreis.png>
+Package pdftex.def Info: img/idealer_parallelschwingkreis.png  used on input li
+ne 898.
+(pdftex.def)             Requested size: 217.66211pt x 112.91632pt.
+<img/ideale_parallelschwingkreis_zeiger.png, id=147, 278.03876pt x 181.67876pt>
+
+File: img/ideale_parallelschwingkreis_zeiger.png Graphic file (type png)
+<use img/ideale_parallelschwingkreis_zeiger.png>
+Package pdftex.def Info: img/ideale_parallelschwingkreis_zeiger.png  used on in
+put line 899.
+(pdftex.def)             Requested size: 217.66211pt x 142.23001pt.
+<img/idealer_parallelschwingkreis_resonanzkruve.png, id=148, 342.27875pt x 250.
+9375pt>
+File: img/idealer_parallelschwingkreis_resonanzkruve.png Graphic file (type png
+)
+<use img/idealer_parallelschwingkreis_resonanzkruve.png>
+Package pdftex.def Info: img/idealer_parallelschwingkreis_resonanzkruve.png  us
+ed on input line 903.
+(pdftex.def)             Requested size: 241.84843pt x 177.31299pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 902--904
+[]\OT1/cmr/m/n/12 Resonanzkurve $\OML/cmm/m/it/12 X \OT1/cmr/m/n/12 = \OML/cmm/
+m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 )$:
+ []
+
+
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 902--904
+[]| 
+ []
+
+
+
+[19 <./img/serienschwingkreis.png> <./img/serienschwingkreis_zeiger.png> <./img
+/serienschwingkreis_real.png> <./img/serienschwingkreis_real_zeiger.png> <./img
+/serienschwinkreis_real_resonanzkurve.png>]
+Overfull \hbox (0.37932pt too wide) in paragraph at lines 908--908
+[]\OT1/cmr/bx/n/14.4 Realer Par-al-lel-re-so-nanz-kreis (ged[]ampfter Par-al-le
+l-re-so-nanz-kreis) 
+ []
+
+
+Underfull \hbox (badness 1953) in paragraph at lines 912--913
+[]\OT1/cmr/m/n/12 Ein rea-ler Par-al-lel-re-so-nanz-kreis enth[]alt
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 912--913
+\OT1/cmr/m/n/12 einen Er-sat-z-wi-der-stand $\OML/cmm/m/it/12 R$\OT1/cmr/m/n/12
+ , der al-le
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 912--913
+\OT1/cmr/m/n/12 Wirk-wi-derst[]ande zu-sam-men-fasst. Da-
+ []
+
+
+Underfull \hbox (badness 2626) in paragraph at lines 912--913
+\OT1/cmr/m/n/12 (D[]ampfungswiderstand). Der Re-so-nanz-
+ []
+
+<img/realer_parallelschwingkreis.png, id=158, 327.2225pt x 187.70125pt>
+File: img/realer_parallelschwingkreis.png Graphic file (type png)
+<use img/realer_parallelschwingkreis.png>
+Package pdftex.def Info: img/realer_parallelschwingkreis.png  used on input lin
+e 917.
+(pdftex.def)             Requested size: 217.66211pt x 124.85413pt.
+<img/realer_parallelschwingkreis_kurve.png, id=159, 331.2375pt x 283.0575pt>
+File: img/realer_parallelschwingkreis_kurve.png Graphic file (type png)
+<use img/realer_parallelschwingkreis_kurve.png>
+Package pdftex.def Info: img/realer_parallelschwingkreis_kurve.png  used on inp
+ut line 918.
+(pdftex.def)             Requested size: 217.66211pt x 186.0022pt.
+
+
+[20 <./img/idealer_parallelschwingkreis.png> <./img/ideale_parallelschwingkreis
+_zeiger.png> <./img/idealer_parallelschwingkreis_resonanzkruve.png>]
+Overfull \hbox (1.02657pt too wide) detected at line 928
+[] \OT1/cmr/m/n/12 = [] + \OML/cmm/m/it/12 j!C \OT1/cmr/m/n/12 = []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 930--931
+[]\OT1/cmr/bx/n/12 Resonanzkreisfrequenz \OT1/cmr/m/n/12 (g[]ultig f[]ur
+ []
+
+
+Underfull \hbox (badness 3312) in paragraph at lines 936--937
+\OT1/cmr/m/n/12 ter-na-tiv durch die Wahl von $\OML/cmm/m/it/12 R[] \OT1/cmr/m/
+n/12 =
+ []
+
+<img/resonanztranformator.png, id=166, 517.935pt x 303.1325pt>
+File: img/resonanztranformator.png Graphic file (type png)
+<use img/resonanztranformator.png>
+Package pdftex.def Info: img/resonanztranformator.png  used on input line 939.
+(pdftex.def)             Requested size: 217.66211pt x 127.3934pt.
+<img/resonanztranformator_zeiger.png, id=167, 678.535pt x 466.74374pt>
+File: img/resonanztranformator_zeiger.png Graphic file (type png)
+<use img/resonanztranformator_zeiger.png>
+Package pdftex.def Info: img/resonanztranformator_zeiger.png  used on input lin
+e 940.
+(pdftex.def)             Requested size: 217.66211pt x 149.71713pt.
+
+Overfull \hbox (92.55309pt too wide) detected at line 956
+\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ) = \OML/c
+mm/m/it/12 UI []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 '\OT1/cmr/m/n/12 )[]1 + [](2\
+OML/cmm/m/it/12 !t \OT1/cmr/m/n/12 + 2\OML/cmm/m/it/12 '[]\OT1/cmr/m/n/12 )[] +
+ \OML/cmm/m/it/12 UI []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 '\OT1/cmr/m/n/12 ) [](
+2\OML/cmm/m/it/12 !t \OT1/cmr/m/n/12 + 2\OML/cmm/m/it/12 '[]\OT1/cmr/m/n/12 )
+ []
+
+<img/momentanleistung_zerlegung.png, id=168, 1024.82875pt x 564.1075pt>
+File: img/momentanleistung_zerlegung.png Graphic file (type png)
+<use img/momentanleistung_zerlegung.png>
+Package pdftex.def Info: img/momentanleistung_zerlegung.png  used on input line
+ 962.
+(pdftex.def)             Requested size: 241.84843pt x 133.12477pt.
+
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 962--963
+[][]| 
+ []
+
+
+
+[21 <./img/realer_parallelschwingkreis.png> <./img/realer_parallelschwingkreis_
+kurve.png> <./img/resonanztranformator.png> <./img/resonanztranformator_zeiger.
+png>]
+<img/wirkleistung_diagramm.png, id=176, 466.74374pt x 376.40625pt>
+File: img/wirkleistung_diagramm.png Graphic file (type png)
+<use img/wirkleistung_diagramm.png>
+Package pdftex.def Info: img/wirkleistung_diagramm.png  used on input line 984.
+
+(pdftex.def)             Requested size: 241.84843pt x 195.0374pt.
+
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 984--985
+[][]| 
+ []
+
+<img/blindleistung_diagramm.png, id=177, 739.76375pt x 344.28625pt>
+File: img/blindleistung_diagramm.png Graphic file (type png)
+<use img/blindleistung_diagramm.png>
+Package pdftex.def Info: img/blindleistung_diagramm.png  used on input line 100
+8.
+(pdftex.def)             Requested size: 241.84843pt x 112.55362pt.
+
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 1008--1009
+[][]| 
+ []
+
+
+
+[22 <./img/momentanleistung_zerlegung.png> <./img/wirkleistung_diagramm.png>]
+Overfull \hbox (5.04207pt too wide) detected at line 1022
+\OML/cmm/m/it/12 P \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 S [] ' Q \OT1/cmr/m/n/12 
+= \OML/cmm/m/it/12 S [] '  [] ' \OT1/cmr/m/n/12 = []
+ []
+
+<img/leistungsdreieck.png, id=184, 216.81pt x 160.6pt>
+File: img/leistungsdreieck.png Graphic file (type png)
+<use img/leistungsdreieck.png>
+Package pdftex.def Info: img/leistungsdreieck.png  used on input line 1025.
+(pdftex.def)             Requested size: 241.84843pt x 179.1552pt.
+
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 1025--1026
+[][]| 
+ []
+
+
+Underfull \hbox (badness 6575) in paragraph at lines 1032--1035
+[]\OT1/cmr/m/n/12 Die \OT1/cmr/bx/n/12 kom-ple-xe Schein-leis-tung \OT1/cmr/m/n
+/12 fasst
+ []
+
+<img/komplexe_scheinleistung_zeiger.png, id=185, 367.3725pt x 201.75375pt>
+File: img/komplexe_scheinleistung_zeiger.png Graphic file (type png)
+<use img/komplexe_scheinleistung_zeiger.png>
+Package pdftex.def Info: img/komplexe_scheinleistung_zeiger.png  used on input 
+line 1045.
+(pdftex.def)             Requested size: 241.84843pt x 132.82231pt.
+
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 1045--1046
+[][]| 
+ []
+
+
+
+[23 <./img/blindleistung_diagramm.png> <./img/leistungsdreieck.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1052--1053
+[]\OT1/cmr/m/n/12 Das Verh[]altnis von Wirk-leis-tung zu
+ []
+
+File: img/leistungsdreieck.png Graphic file (type png)
+<use img/leistungsdreieck.png>
+Package pdftex.def Info: img/leistungsdreieck.png  used on input line 1064.
+(pdftex.def)             Requested size: 241.84843pt x 179.1552pt.
+
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 1064--1065
+[][]| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1071--1075
+[]\OT1/cmr/m/n/12 Typische In-dus-trie-an-la-gen (Mo-to-ren,
+ []
+
+
+Underfull \hbox (badness 7273) in paragraph at lines 1071--1075
+\OT1/cmr/m/n/12 Trans-for-ma-to-ren) sind \OT1/cmr/bx/n/12 in-duk-tiv\OT1/cmr/m
+/n/12 . Die
+ []
+
+
+Underfull \hbox (badness 4013) in paragraph at lines 1071--1075
+\OT1/cmr/m/n/12 schen Er-zeu-ger und Ver-brau-cher hin-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1071--1075
+\OT1/cmr/m/n/12 Ener-gie-ver-sor-gungs-un-ter-neh-men for-dern
+ []
+
+<img/blindleistungskompensation_schaltung.png, id=191, 457.71pt x 343.2825pt>
+File: img/blindleistungskompensation_schaltung.png Graphic file (type png)
+<use img/blindleistungskompensation_schaltung.png>
+Package pdftex.def Info: img/blindleistungskompensation_schaltung.png  used on 
+input line 1085.
+(pdftex.def)             Requested size: 241.84843pt x 181.3836pt.
+<img/blindleistungskompensation_zeiger.png, id=192, 575.14874pt x 296.10625pt>
+File: img/blindleistungskompensation_zeiger.png Graphic file (type png)
+<use img/blindleistungskompensation_zeiger.png>
+Package pdftex.def Info: img/blindleistungskompensation_zeiger.png  used on inp
+ut line 1086.
+(pdftex.def)             Requested size: 241.84843pt x 124.51286pt.
+
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 1085--1087
+[][]
+ []
+
+
+Overfull \hbox (24.18633pt too wide) in paragraph at lines 1085--1087
+[]| 
+ []
+
+
+
+[24 <./img/komplexe_scheinleistung_zeiger.png>]
+
+[25 <./img/blindleistungskompensation_schaltung.png> <./img/blindleistungskompe
+nsation_zeiger.png>]
+
+[26]
+
+[27]
+
+[28]
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1364.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1364.
+
+Missing character: There is no ∞ in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1364.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1364.
+
+Missing character: There is no ∞ in font cmr12!
+
+
+[29]
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1458.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1458.
+
+Missing character: There is no ∞ in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1459.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1459.
+
+Missing character: There is no ∞ in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1460.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1460.
+
+Missing character: There is no ∞ in font cmr12!
+
+
+[30]
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1474.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1474.
+
+Missing character: There is no ∞ in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1475.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1475.
+
+Missing character: There is no ∞ in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1475.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1475.
+
+Missing character: There is no ∞ in font cmr12!
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1476.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 1476.
+
+Missing character: There is no ∞ in font cmr12!
+
+
+[31] (./Zusammenfassung_EL2.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4895 strings out of 473197
- 78814 string characters out of 5718605
- 496528 words of memory out of 5000000
- 28100 multiletter control sequences out of 15000+600000
- 568562 words of font info for 73 fonts, out of 8000000 for 9000
+ 5393 strings out of 473197
+ 97945 string characters out of 5718605
+ 497528 words of memory out of 5000000
+ 28595 multiletter control sequences out of 15000+600000
+ 569415 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,12n,65p,619b,258s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,16n,65p,616b,289s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
@@ -588,11 +1251,15 @@ type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb>
-Output written on Zusammenfassung_EL2.pdf (8 pages, 703328 bytes).
+8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/s
+hare/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/typ
+e1/public/cm-super/sfrm1200.pfb>
+Output written on Zusammenfassung_EL2.pdf (31 pages, 1893078 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
+ 293 PDF objects out of 1000 (max. 8388607)
+ 120 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 266 words of extra memory for PDF output out of 10000 (max. 10000000)
 

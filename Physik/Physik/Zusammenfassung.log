@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.3.15)  16 MAR 2026 11:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.3.15)  26 APR 2026 14:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -172,42 +172,274 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \titlewidthlast=\dimen164
 \titlewidthfirst=\dimen165
 )
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2024/07/06 v1.0i Color table columns (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
+\col@sep=\dimen166
+\ar@mcellbox=\box57
+\extrarowheight=\dimen167
+\NC@list=\toks27
+\extratabsurround=\skip56
+\backup@length=\skip57
+\ar@cellbox=\box58
+)
+\everycr=\toks28
+\minrowclearance=\skip58
+\rownum=\count286
+)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen168
+\lightrulewidth=\dimen169
+\cmidrulewidth=\dimen170
+\belowrulesep=\dimen171
+\belowbottomsep=\dimen172
+\aboverulesep=\dimen173
+\abovetopsep=\dimen174
+\cmidrulesep=\dimen175
+\cmidrulekern=\dimen176
+\defaultaddspace=\dimen177
+\@cmidla=\count287
+\@cmidlb=\count288
+\@aboverulesep=\dimen178
+\@belowrulesep=\dimen179
+\@thisruleclass=\count289
+\@lastruleclass=\count290
+\@thisrulewidth=\dimen180
+)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2025/02/11 v3.2a Micro-typographical refinements (RS)
+
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count291
+)
+\MT@toks=\toks29
+\MT@tempbox=\box59
+\MT@count=\count292
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1087.
+LaTeX Info: Redefining \leftprotrusion on input line 1088.
+\MT@prot@toks=\toks30
+LaTeX Info: Redefining \rightprotrusion on input line 1107.
+LaTeX Info: Redefining \textls on input line 1449.
+\MT@outer@kern=\dimen181
+LaTeX Info: Redefining \microtypecontext on input line 2053.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
+\MT@listname@count=\count293
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2025/02/11 v3.2a Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 944.
+LaTeX Info: Redefining \lslig on input line 944.
+\MT@outer@space=\skip59
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2025/02/11 v3.2a microtype main configuration file (RS)
+)
+LaTeX Info: Redefining \microtypesetup on input line 3065.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/mdframed/mdframed.sty
+Package: mdframed 2013/07/01 1.9b: mdframed
+
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2025-01-18 L3 programming layer (loader) 
+
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count286
-\l__pdf_internal_box=\box57
+\l__color_backend_stack_int=\count294
+\l__pdf_internal_box=\box60
+))
+Package: xparse 2024-08-16 L3 Experimental document command parser
+)
+(/usr/share/texlive/texmf-dist/tex/latex/zref/zref-abspage.sty
+Package: zref-abspage 2023-09-14 v2.35 Module abspage for zref (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2023-09-14 v2.35 Module base for zref (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+Package zref Info: New property list: main on input line 767.
+Package zref Info: New property: default on input line 768.
+Package zref Info: New property: page on input line 769.
+)
+\c@abspage=\count295
+Package zref Info: New property: abspage on input line 67.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/needspace/needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+)
+\mdf@templength=\skip60
+\c@mdf@globalstyle@cnt=\count296
+\mdf@skipabove@length=\skip61
+\mdf@skipbelow@length=\skip62
+\mdf@leftmargin@length=\skip63
+\mdf@rightmargin@length=\skip64
+\mdf@innerleftmargin@length=\skip65
+\mdf@innerrightmargin@length=\skip66
+\mdf@innertopmargin@length=\skip67
+\mdf@innerbottommargin@length=\skip68
+\mdf@splittopskip@length=\skip69
+\mdf@splitbottomskip@length=\skip70
+\mdf@outermargin@length=\skip71
+\mdf@innermargin@length=\skip72
+\mdf@linewidth@length=\skip73
+\mdf@innerlinewidth@length=\skip74
+\mdf@middlelinewidth@length=\skip75
+\mdf@outerlinewidth@length=\skip76
+\mdf@roundcorner@length=\skip77
+\mdf@footenotedistance@length=\skip78
+\mdf@userdefinedwidth@length=\skip79
+\mdf@needspace@length=\skip80
+\mdf@frametitleaboveskip@length=\skip81
+\mdf@frametitlebelowskip@length=\skip82
+\mdf@frametitlerulewidth@length=\skip83
+\mdf@frametitleleftmargin@length=\skip84
+\mdf@frametitlerightmargin@length=\skip85
+\mdf@shadowsize@length=\skip86
+\mdf@extratopheight@length=\skip87
+\mdf@subtitleabovelinewidth@length=\skip88
+\mdf@subtitlebelowlinewidth@length=\skip89
+\mdf@subtitleaboveskip@length=\skip90
+\mdf@subtitlebelowskip@length=\skip91
+\mdf@subtitleinneraboveskip@length=\skip92
+\mdf@subtitleinnerbelowskip@length=\skip93
+\mdf@subsubtitleabovelinewidth@length=\skip94
+\mdf@subsubtitlebelowlinewidth@length=\skip95
+\mdf@subsubtitleaboveskip@length=\skip96
+\mdf@subsubtitlebelowskip@length=\skip97
+\mdf@subsubtitleinneraboveskip@length=\skip98
+\mdf@subsubtitleinnerbelowskip@length=\skip99
+
+(/usr/share/texlive/texmf-dist/tex/latex/mdframed/md-frame-0.mdf
+File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
+)
+\mdf@frametitlebox=\box61
+\mdf@footnotebox=\box62
+\mdf@splitbox@one=\box63
+\mdf@splitbox@two=\box64
+\mdf@splitbox@save=\box65
+\mdfsplitboxwidth=\skip100
+\mdfsplitboxtotalwidth=\skip101
+\mdfsplitboxheight=\skip102
+\mdfsplitboxdepth=\skip103
+\mdfsplitboxtotalheight=\skip104
+\mdfframetitleboxwidth=\skip105
+\mdfframetitleboxtotalwidth=\skip106
+\mdfframetitleboxheight=\skip107
+\mdfframetitleboxdepth=\skip108
+\mdfframetitleboxtotalheight=\skip109
+\mdffootnoteboxwidth=\skip110
+\mdffootnoteboxtotalwidth=\skip111
+\mdffootnoteboxheight=\skip112
+\mdffootnoteboxdepth=\skip113
+\mdffootnoteboxtotalheight=\skip114
+\mdftotallinewidth=\skip115
+\mdfboundingboxwidth=\skip116
+\mdfboundingboxtotalwidth=\skip117
+\mdfboundingboxheight=\skip118
+\mdfboundingboxdepth=\skip119
+\mdfboundingboxtotalheight=\skip120
+\mdf@freevspace@length=\skip121
+\mdf@horizontalwidthofbox@length=\skip122
+\mdf@verticalmarginwhole@length=\skip123
+\mdf@horizontalspaceofbox=\skip124
+\mdfsubtitleheight=\skip125
+\mdfsubsubtitleheight=\skip126
+\c@mdfcountframes=\count297
+
+****** mdframed patching \endmdf@trivlist
+
+****** -- success******
+
+\mdf@envdepth=\count298
+\c@mdf@env@i=\count299
+\c@mdf@env@ii=\count300
+\c@mdf@zref@counter=\count301
+Package zref Info: New property: mdf@pagevalue on input line 895.
 )
 (./Zusammenfassung.aux)
 \openout1 = `Zusammenfassung.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count287
-\scratchdimen=\dimen166
-\scratchbox=\box58
-\nofMPsegments=\count288
-\nofMParguments=\count289
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count290
-\MPscratchDim=\dimen167
-\MPnumerator=\count291
-\makeMPintoPDFobject=\count292
-\everyMPtoPDFconversion=\toks28
+\scratchcounter=\count302
+\scratchdimen=\dimen182
+\scratchbox=\box66
+\nofMPsegments=\count303
+\nofMParguments=\count304
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count305
+\MPscratchDim=\dimen183
+\MPnumerator=\count306
+\makeMPintoPDFobject=\count307
+\everyMPtoPDFconversion=\toks32
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -251,16 +483,43 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+LaTeX Info: Redefining \microtypecontext on input line 58.
+Package microtype Info: Applying patch `item' on input line 58.
+Package microtype Info: Applying patch `toc' on input line 58.
+Package microtype Info: Applying patch `eqnum' on input line 58.
+Package microtype Info: Applying patch `footnote' on input line 58.
+Package microtype Info: Applying patch `verbatim' on input line 58.
+LaTeX Info: Redefining \microtypesetup on input line 58.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+LaTeX Info: Redefining \showhyphens on input line 58.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
 (./Zusammenfassung.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
 LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ))
 \tf@toc=\write3
 \openout3 = `Zusammenfassung.toc'.
@@ -271,126 +530,156 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/cm-super/cm-super-t1.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--124
-[]\T1/cmr/bx/n/10 einsetzetn gle-ich-f�r-mige
  []
 
 
 
 [2]
-<img/inertialsystem.png, id=23, 693.34032pt x 91.09032pt>
+<img/inertialsystem.png, id=19, 693.34032pt x 91.09032pt>
 File: img/inertialsystem.png Graphic file (type png)
 <use img/inertialsystem.png>
-Package pdftex.def Info: img/inertialsystem.png  used on input line 174.
+Package pdftex.def Info: img/inertialsystem.png  used on input line 213.
 (pdftex.def)             Requested size: 512.14963pt x 67.28761pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 230--230
-[]\T1/cmr/bx/n/10 Laminarer Wider-stand
- []
-
 
 
 [3 <./img/inertialsystem.png>]
-<img/konservative_kräfte.png, id=29, 621.07031pt x 110.66344pt>
-File: img/konservative_kräfte.png Graphic file (type png)
-<use img/konservative_kräfte.png>
-Package pdftex.def Info: img/konservative_kräfte.png  used on input line 293.
-(pdftex.def)             Requested size: 512.14963pt x 91.25623pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 340--340
-[]\T1/cmr/bx/n/10 Tangentialgeschwindigkeit
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
+[]|\T1/cmr/bx/n/10 (+20) Laminarer Wider-stand
  []
 
+<img/konservative_kräfte.png, id=26, 621.07031pt x 110.66344pt>
+File: img/konservative_kräfte.png Graphic file (type png)
+<use img/konservative_kräfte.png>
+Package pdftex.def Info: img/konservative_kräfte.png  used on input line 309.
+(pdftex.def)             Requested size: 512.14963pt x 91.25623pt.
 
 
 [4 <./img/konservative_kräfte.png>]
-<img/tabelle_trägheitsmoment.png, id=35, 875.27pt x 540.0175pt>
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+[]|\T1/cmr/bx/n/10 (+20) Winkelgeschwindigkeit (gle-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 352--352
+[]|\T1/cmr/bx/n/10 (+20) Winkelgeschwindigkeit ohne
+ []
+
+<img/tabelle_trägheitsmoment.png, id=33, 1750.54pt x 1080.035pt>
 File: img/tabelle_trägheitsmoment.png Graphic file (type png)
 <use img/tabelle_trägheitsmoment.png>
 Package pdftex.def Info: img/tabelle_trägheitsmoment.png  used on input line 4
-22.
+09.
 (pdftex.def)             Requested size: 512.14963pt x 315.98724pt.
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 422--423
+Overfull \hbox (15.0pt too wide) in paragraph at lines 409--410
 [][] 
  []
 
 
 
-[5 <./img/tabelle_trägheitsmoment.png>]
-<img/harmonische_schwingung.png, id=40, 612.78937pt x 70.76437pt>
-File: img/harmonische_schwingung.png Graphic file (type png)
-<use img/harmonische_schwingung.png>
-Package pdftex.def Info: img/harmonische_schwingung.png  used on input line 427
-.
-(pdftex.def)             Requested size: 512.14963pt x 59.1458pt.
+[5]
+Underfull \hbox (badness 2150) in paragraph at lines 417--417
+[]|\T1/cmr/bx/n/10 (+20) Drehimpuls bzgl. Sym-me-
+ []
 
-Underfull \hbox (badness 10000) in paragraph at lines 437--442
-\OML/cmm/m/it/10 ^^N \OT1/cmr/m/n/10 =$ \T1/cmr/m/n/10 Phasenkon-stante (ver-
+
+Underfull \hbox (badness 2680) in paragraph at lines 423--423
+[]|\T1/cmr/bx/n/10 (+20) Bahndrehimpuls und Eigen-
+ []
+
+
+Underfull \hbox (badness 4156) in paragraph at lines 424--424
+[]|\T1/cmr/bx/n/10 (+20) Definition des Bah-n-drehim-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 434--434
+[]|\T1/cmr/bx/n/10 (+20) Rollbedingung
+ []
+
+
+Underfull \hbox (badness 1205) in paragraph at lines 442--442
+[]|\T1/cmr/bx/n/10 (+20) Rollbedingung $\OML/cmm/m/it/10 v$ \T1/cmr/bx/n/10 (+2
+0) Massen-mit-
  []
 
 
 
-[6 <./img/harmonische_schwingung.png>]
-<img/inelastischer_stoss.png, id=45, 593.96906pt x 68.50594pt>
+[6 <./img/tabelle_trägheitsmoment.png>]
+<img/harmonische_schwingung.png, id=43, 612.78937pt x 70.76437pt>
+File: img/harmonische_schwingung.png Graphic file (type png)
+<use img/harmonische_schwingung.png>
+Package pdftex.def Info: img/harmonische_schwingung.png  used on input line 471
+.
+(pdftex.def)             Requested size: 512.14963pt x 59.1458pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 479--484
+\OML/cmm/m/it/10 ^^N \OT1/cmr/m/n/10 (+20) =$ \T1/cmr/m/n/10 (+20) Phasenkon-st
+ante (Ver-
+ []
+
+
+
+[7 <./img/harmonische_schwingung.png>]
+<img/inelastischer_stoss.png, id=49, 593.96906pt x 68.50594pt>
 File: img/inelastischer_stoss.png Graphic file (type png)
 <use img/inelastischer_stoss.png>
-Package pdftex.def Info: img/inelastischer_stoss.png  used on input line 603.
+Package pdftex.def Info: img/inelastischer_stoss.png  used on input line 631.
 (pdftex.def)             Requested size: 512.14963pt x 59.0718pt.
-<img/elastischer_stoss.png, id=46, 593.96906pt x 88.83188pt>
+<img/elastischer_stoss.png, id=50, 593.96906pt x 88.83188pt>
 File: img/elastischer_stoss.png Graphic file (type png)
 <use img/elastischer_stoss.png>
-Package pdftex.def Info: img/elastischer_stoss.png  used on input line 611.
+Package pdftex.def Info: img/elastischer_stoss.png  used on input line 638.
 (pdftex.def)             Requested size: 512.14963pt x 76.59859pt.
-<img/endgeschwindikgeit_elastisch.png, id=47, 593.21625pt x 152.06813pt>
+<img/endgeschwindikgeit_elastisch.png, id=51, 593.21625pt x 152.06813pt>
 File: img/endgeschwindikgeit_elastisch.png Graphic file (type png)
 <use img/endgeschwindikgeit_elastisch.png>
 Package pdftex.def Info: img/endgeschwindikgeit_elastisch.png  used on input li
-ne 612.
+ne 639.
 (pdftex.def)             Requested size: 512.14963pt x 131.29115pt.
 
 
-[7 <./img/inelastischer_stoss.png>]
-<img/relativgeschwindigkeit_elastischer_stoss.png, id=53, 594.72188pt x 89.5846
+[8 <./img/inelastischer_stoss.png>]
+<img/relativgeschwindigkeit_elastischer_stoss.png, id=56, 594.72188pt x 89.5846
 9pt>
 File: img/relativgeschwindigkeit_elastischer_stoss.png Graphic file (type png)
 <use img/relativgeschwindigkeit_elastischer_stoss.png>
 Package pdftex.def Info: img/relativgeschwindigkeit_elastischer_stoss.png  used
- on input line 614.
+ on input line 642.
 (pdftex.def)             Requested size: 512.14963pt x 77.15067pt.
-<img/elastizitätzahl.png, id=54, 595.47469pt x 127.97812pt>
+<img/elastizitätzahl.png, id=57, 595.47469pt x 127.97812pt>
 File: img/elastizitätzahl.png Graphic file (type png)
 <use img/elastizitätzahl.png>
-Package pdftex.def Info: img/elastizitätzahl.png  used on input line 617.
+Package pdftex.def Info: img/elastizitätzahl.png  used on input line 645.
 (pdftex.def)             Requested size: 512.14963pt x 110.0766pt.
 
 
-[8 <./img/elastischer_stoss.png> <./img/endgeschwindikgeit_elastisch.png> <./im
+[9 <./img/elastischer_stoss.png> <./img/endgeschwindikgeit_elastisch.png> <./im
 g/relativgeschwindigkeit_elastischer_stoss.png> <./img/elastizitätzahl.png>]
-(./Zusammenfassung.aux)
+
+[10]
+
+[11] (./Zusammenfassung.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3836 strings out of 473197
- 56160 string characters out of 5718605
- 469162 words of memory out of 5000000
- 27059 multiletter control sequences out of 15000+600000
- 568252 words of font info for 54 fonts, out of 8000000 for 9000
+ 8318 strings out of 473197
+ 135042 string characters out of 5718605
+ 612228 words of memory out of 5000000
+ 31363 multiletter control sequences out of 15000+600000
+ 570712 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,16n,65p,232b,240s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,18n,93p,1012b,267s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texli
@@ -400,14 +689,14 @@ fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx0700.pfb><
-/usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fon
-ts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-s
-uper/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></
+/usr/share/texmf/fonts/type1/public/cm-super/sfbx0900.pfb></usr/share/texmf/fon
+ts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-s
+uper/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></
 usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Zusammenfassung.pdf (8 pages, 649856 bytes).
+Output written on Zusammenfassung.pdf (11 pages, 1199116 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+ 135 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26670 words of extra memory for PDF output out of 29859 (max. 10000000)
 
